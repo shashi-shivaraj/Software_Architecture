@@ -1,0 +1,59 @@
+package Hardware
+public	
+	
+	memory RAM
+	features
+	busAcc: requires bus access DefaultBus.impl;	
+	end RAM;
+	
+	memory Storage
+	features
+	busAcc: requires bus access DefaultBus.impl;
+	end Storage;
+	
+	memory ROM
+	features
+	busAcc: requires bus access DefaultBus.impl;
+	end ROM;
+	
+	device Bluetooth_adapter
+	features
+	busAcc: requires bus access DefaultBus.impl;	
+	end Bluetooth_adapter;
+	
+	device Power_Adapter
+	features
+	busAcc: requires bus access DefaultBus.impl;
+	end Power_Adapter;
+	
+	bus CAN_Controller
+	end CAN_Controller;
+	bus implementation CAN_Controller.impl 
+	
+	end CAN_Controller.impl ; 
+	
+-- Description of the bus onto which connections are bound 
+---------------------------------------------------------- 
+bus DefaultBus  
+end DefaultBus; 
+bus implementation DefaultBus.impl 
+	
+end DefaultBus.impl ; 
+
+-----------------------------------------------
+
+-- Description of a processor to execute the threads 
+------------------------------------------- 
+processor MainProcessor 
+	features
+		busAcc : requires bus access DefaultBus.impl ;
+end MainProcessor ; 
+processor implementation MainProcessor.impl 
+	subcomponents
+		mem : memory RAM ;
+	properties
+		Scheduling_Protocol => ( RMS ); 
+end MainProcessor.impl ;
+	
+	
+end Hardware;

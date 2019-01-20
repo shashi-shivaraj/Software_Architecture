@@ -1,0 +1,37 @@
+package HMI
+public
+	with Hardware;
+	
+device TouchScreen
+	features
+		touch_detected: out event port;
+		update_display: in event port;
+		busAcc : requires bus access Hardware::DefaultBus.impl ;
+end TouchScreen;
+
+device Microphone
+	features
+		record_sound : out data port;
+		enable_mic : in event port;
+		busAcc : requires bus access Hardware::DefaultBus.impl ;
+end Microphone;
+
+device Speaker
+	features
+		play_sound : in data port;
+		enable_speaker:in event port;
+		busAcc : requires bus access Hardware::DefaultBus.impl ;
+end Speaker;
+
+process sys_controller
+	features
+	touch_event: in event port; 
+	
+end sys_controller;
+		
+
+process implementation sys_controller.with_threads
+		
+end sys_controller.with_threads;
+		
+end HMI;

@@ -4,26 +4,37 @@ public
 	memory RAM
 	features
 	busAcc: requires bus access DefaultBus.impl;	
+	datain: in data port;
+	dataout: out data port;
+	control: in event port;
 	end RAM;
 	
 	memory Storage
 	features
 	busAcc: requires bus access DefaultBus.impl;
+	datain: in data port;
+	dataout: out data port;
+	control: in event port;
 	end Storage;
 	
 	memory ROM
 	features
 	busAcc: requires bus access DefaultBus.impl;
+	control: in event port;
 	end ROM;
 	
 	device Bluetooth_adapter
 	features
-	busAcc: requires bus access DefaultBus.impl;	
+	busAcc: requires bus access DefaultBus.impl;
+	datain: in data port;
+	dataout: out data port;
+	control: in event port; 	
 	end Bluetooth_adapter;
 	
 	device Power_Adapter
 	features
 	busAcc: requires bus access DefaultBus.impl;
+	control: in event port; 
 	end Power_Adapter;
 	
 	bus CAN_Controller

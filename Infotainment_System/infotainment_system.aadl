@@ -3,6 +3,7 @@ public
 
 with HMI;
 with Hardware;
+with software;
 
 system infotainment_sys
 end infotainment_sys;
@@ -16,7 +17,8 @@ system implementation infotainment_sys.with_devices
 		sys_Monitor : device HMI::TouchScreen;
 		sys_Microphone : device HMI::Microphone;
 		sys_Speaker : device HMI::Speaker;
-		sys_controller : process HMI::sys_controller;
+		sys_controller : process HMI::sys_controller.with_threads;
+		sys_OS : memory Hardware::ROM;
 	
 	connections
 		processor_bus_conn : bus access sys_bus->sys_processor.busAcc;
@@ -24,13 +26,16 @@ system implementation infotainment_sys.with_devices
 		Power_bus_conn : bus access sys_bus->sys_Power_Adapter.busAcc;
 		Monitor_bus_conn : bus access sys_bus->sys_Monitor.busAcc;
 		Mic_bus_conn : bus access sys_bus->sys_Microphone.busAcc;
-	    Speaker_bus_conn : bus access sys_bus->sys_Speaker.busAcc;
+	    peaker_bus_conn : bus access sys_bus->sys_Speaker.busAcc;
+	    
+	    --outport->inport
+	    touch_event_conn: port sys_Monitor.touch_detected->sys_controller.touch_event;
+	    display_data_conn: port sys_controller.display_data->sys_Monitor.update_display;
+	    mic_event_conn: port sys_controller.Mic_Control->sys_Microphone.enable_mic;
+	    mic_data_conn: port sys_Microphone.record_sound->sys_controller.Mic_inData;
+	    speaker_event_conn: port sys_controller.Speaker_Control->sys_Speaker.enable_speaker;
+	    speaker_data_conn: port sys_controller.Speaker_outData->sys_Speaker.play_sound;
 		
 	end infotainment_sys.with_devices;
-	
-	
-	
-	
-
 	
 end infotainment_system;

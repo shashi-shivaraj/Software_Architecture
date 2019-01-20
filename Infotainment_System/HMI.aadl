@@ -35,6 +35,8 @@ process sys_controller
 	Speaker_outData : out data port;
 	Speaker_Control : out event port;
 	display_data: out data port;
+	BT_control : out event port;
+	BT_data : in out data port; 
 end sys_controller;
 		
 

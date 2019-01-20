@@ -1,1 +1,6 @@
 AADL model for an Infotainment system architecture.
+
+
+Notes/Issues:
+1)Assuming the system has suitable power supply adapter connected to the Motherboard 
+of the system and thus in turn provides power to all subcomponents.

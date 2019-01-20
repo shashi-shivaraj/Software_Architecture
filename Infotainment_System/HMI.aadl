@@ -5,7 +5,7 @@ public
 device TouchScreen
 	features
 		touch_detected: out event port;
-		update_display: in event port;
+		update_display: in data port;
 		busAcc : requires bus access Hardware::DefaultBus.impl ;
 end TouchScreen;
 
@@ -25,8 +25,10 @@ end Speaker;
 
 process sys_controller
 	features
-	touch_event: in event port; 
-	
+	touch_event: in event port;
+	Mic_inData : in  data port;
+	Speaker_outData : out data port;
+	display_data: out data port;
 end sys_controller;
 		
 

@@ -202,6 +202,21 @@
       </bo>
       <contentFilters/>
     </element>
+    <element uuid="f837b2d0-25e7-4bf4-a30b-16f112a33143">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>disp_application</seg>
+      </bo>
+      <position x="660.0" y="40.0"/>
+      <size width="170.0" height="35.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
     <element uuid="27ca38ba-f8dc-462e-9d00-09a830b33f35">
       <element uuid="96c7ce37-e243-4568-96b1-17bdabc0d5e2" dockArea="left">
         <bo>

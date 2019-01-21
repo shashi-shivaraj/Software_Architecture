@@ -1,6 +1,14 @@
 package Software
 public
 	
+subprogram Display_Application
+--contains the application software to be displayed on the touch screen
+end Display_Application;
+
+subprogram MiddleWear
+-- contains the utility software which performs the requested operation triggered by the user.	
+end MiddleWear;
+	
 	
 	
 	

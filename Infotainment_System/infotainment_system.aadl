@@ -3,7 +3,7 @@ public
 
 with HMI;
 with Hardware;
---with software;
+with software;
 
 system infotainment_sys
 end infotainment_sys;
@@ -17,6 +17,7 @@ system implementation infotainment_sys.with_devices
 		sys_Audio: device HMI::Audio;
 		sys_controller : process HMI::sys_controller.with_threads;
 		sys_OS : memory Hardware::ROM;
+		Disp_Application:subprogram Software::Display_Application;
 	
 	connections
 		processor_bus_conn : bus access sys_bus->sys_processor.busAcc;
@@ -25,7 +26,6 @@ system implementation infotainment_sys.with_devices
 		Audio_bus : bus access sys_bus->sys_Audio.busAcc;
 	    ROM_conn : bus access sys_bus->sys_OS.busAcc;
 	    
-	    --outport->inport
 	    touch_event_conn: port sys_Monitor.touch_detected->sys_controller.touch_event;
 	    display_data_conn: port sys_controller.display_data->sys_Monitor.update_display;
 	    Audio_event_conn: port sys_controller.Audio_Control->sys_Audio.config_audio;

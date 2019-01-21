@@ -430,6 +430,21 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
+    <element uuid="205185ce-2574-4431-baf5-72e985cf3d8b">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>middleware</seg>
+      </bo>
+      <position x="808.0" y="31.0"/>
+      <size width="134.0" height="35.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
     <element uuid="1246c4e3-59b8-43b7-bae7-fd3e7c6eea56">
       <element uuid="e1dc9dff-ba3d-4760-be8e-7d495288d74c" dockArea="left">
         <bo>

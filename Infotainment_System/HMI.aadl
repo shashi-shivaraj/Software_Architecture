@@ -1,6 +1,7 @@
 package HMI
 public
 	with Hardware;
+	with Software;
 	
 device TouchScreen
 	features
@@ -17,10 +18,6 @@ device Audio
 		busAcc : requires bus access Hardware::DefaultBus.impl ;
 end Audio;
 
-subprogram Application
-	
-end Application;
-
 process sys_controller
 	features
 	touch_event: in event port;
@@ -29,7 +26,7 @@ process sys_controller
 	Speaker_outData : out data port;
 	display_data: out data port;
 	BT_control : out event port;
-	BT_data : in out data port; 
+	BT_data : in out data port;
 end sys_controller;
 		
 
@@ -38,9 +35,10 @@ process implementation sys_controller.with_threads
 		main_controller: thread Main_Controller.impl;
 		touch_detection: thread Touch_Detected.impl; 
 		BT_controller : thread BT_Manager.impl;
-		Audio_controller : thread Audio_Manager.impl; 
-	connections
+		Audio_controller : thread Audio_Manager.impl;
+		MiddleWare:subprogram Software::MiddleWear; 
 		
+	connections	
 		touch_event_conn : port touch_event->touch_detection.touch_event_in;
 		touch_notify : port touch_detection.notify_touch->main_controller.touch_event;
 		display_conn : port main_controller.update_display -> display_data;
@@ -72,6 +70,11 @@ thread Main_Controller
 end Main_Controller;
 
 thread implementation Main_Controller.impl
+	
+	calls C: {
+    		App : subprogram Software::Display_Application;
+    		MidW_SW : subprogram Software::MiddleWear;
+    	};
 	
 end Main_Controller.impl;
 

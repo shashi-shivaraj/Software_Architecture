@@ -31,7 +31,7 @@ process sys_controller
 	features
 	touch_event: in event port;
 	Mic_inData : in  data port;
-	Mic_Control : out event port;
+	Mic_Control : in out event port;
 	Speaker_outData : out data port;
 	Speaker_Control : out event port;
 	display_data: out data port;
@@ -41,13 +41,80 @@ end sys_controller;
 		
 
 process implementation sys_controller.with_threads
-	--subcomponents
+	subcomponents
+		main_controller: thread Main_Controller.impl;
+		touch_detection: thread Touch_Detected.impl; 
+		BT_controller : thread BT_Manager.impl; 
+		Mic_controller : thread Mic_Manager.impl;
+	connections
 		
-	--connections
+		touch_event_conn : port touch_event->touch_detection.touch_event_in;
+		touch_notify : port touch_detection.notify_touch->main_controller.touch_event;
+		display_conn : port main_controller.update_display -> display_data;
 		
+		BT_evnt_conn : port main_controller.BT_event->BT_controller.BT_connection_event;
+		BT_data_conn : port main_controller.BT_data->BT_controller.BT_data_conn;
+		
+		HW_BT_evnt_conn : port BT_controller.BT_HW_connection_event->BT_control;
+		HW_BT_data_conn : port BT_controller.BT_HW_data_conn->BT_data;
+		
+		Mic_evnt_conn : port main_controller.Mic_event->Mic_controller.Mic_connection_event;
+		Mic_data_conn : port Mic_controller.Mic_data_conn->main_controller.Mic_Data;
+		
+		HW_Mic_evnt_conn : port Mic_controller.Mic_HW_connection_event->Mic_control;
+		HW_Mic_data_conn : port Mic_inData->Mic_controller.Mic_HW_data_conn;
+				
+end sys_controller.with_threads;
+
+thread Main_Controller
+	features
+		touch_event : in event port;
+		update_display : out data port;
+		BT_event: in out event port;
+		BT_data : in out data port;
+		Mic_event : in out event port;
+		Mic_Data : in data port;
+end Main_Controller;
+
+thread implementation Main_Controller.impl
+	
+end Main_Controller.impl;
+
+thread Touch_Detected
+	features
+		touch_event_in : in event port;
+		notify_touch : out event port;
+end Touch_Detected;
+
+thread implementation Touch_Detected.impl
+	
+end Touch_Detected.impl;
+
+thread BT_Manager
+	features 
+		BT_connection_event : in out event port;
+		BT_data_conn : in out data port;
+		BT_HW_connection_event : in out event port;
+		BT_HW_data_conn : in out data port;
+	
+end BT_Manager;
+
+thread implementation BT_Manager.impl
 	
 		
-		
-end sys_controller.with_threads;
-		
+end BT_Manager.impl;
+
+thread Mic_Manager
+	features 
+		Mic_connection_event : in out event port;
+		Mic_data_conn : out data port;
+		Mic_HW_connection_event :in out event port;
+		Mic_HW_data_conn : in data port;
+end Mic_Manager;
+
+thread implementation Mic_Manager.impl
+	
+end Mic_Manager.impl;
+
+
 end HMI;

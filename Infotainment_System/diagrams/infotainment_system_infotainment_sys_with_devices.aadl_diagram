@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="4a7a1e4f-9206-4f4c-bf21-44d5da7d5fd9" manual="true">
-    <element uuid="7f63a5ba-e598-44ad-b429-2a3f4dc821da">
-      <element uuid="25c2e494-c114-4ddc-97d7-012f524eaa24">
+  <element uuid="eeed9181-c91c-41b7-894b-cec4311c2289" manual="true">
+    <element uuid="d2622b07-c3d8-4f03-8775-0630c7526773">
+      <element uuid="2c11fe72-e8ed-408a-a92e-4b94a5ecc45a">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -14,14 +14,16 @@
         <seg>bt_bus_conn</seg>
       </bo>
       <bendpoints>
-        <point x="139.0" y="714.3333333333333"/>
-        <point x="195.0" y="714.3333333333333"/>
-        <point x="195.0" y="546.3333333333333"/>
+        <point x="139.0" y="492.0"/>
+        <point x="155.0" y="492.0"/>
+        <point x="155.0" y="120.0"/>
+        <point x="989.0" y="120.0"/>
+        <point x="989.0" y="94.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="7a904bc1-c7dc-4fc5-b5b4-235443d8f9c2">
-      <element uuid="8c43e94a-ecc5-4a8e-b0d6-5a92f54bdb61">
+    <element uuid="2eedb57d-2acc-4de4-9f01-b89ed9ad8104">
+      <element uuid="635fa32f-518c-4f1d-9b6b-77c1a5de376a">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -32,10 +34,14 @@
         <seg>connection</seg>
         <seg>bt_data_comm</seg>
       </bo>
+      <bendpoints>
+        <point x="999.0" y="304.0"/>
+        <point x="999.0" y="194.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="95e82b27-6212-4245-abcc-4668316bc956">
-      <element uuid="97293553-e579-433f-a280-c74f79174a39">
+    <element uuid="39b0bc33-d2e3-4547-817d-29ddad653dfd">
+      <element uuid="42bb07ea-03bc-44ec-88e2-a55526238fce">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -46,10 +52,14 @@
         <seg>connection</seg>
         <seg>bt_event_conn</seg>
       </bo>
+      <bendpoints>
+        <point x="989.0" y="254.0"/>
+        <point x="989.0" y="144.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="a1100373-7b96-480a-820a-85ce04e21381">
-      <element uuid="0f74fb4a-e93a-4f5a-90c3-32a874420442">
+    <element uuid="505b67be-a46d-4116-8e78-74fdf9858086">
+      <element uuid="8f433bf5-7c6f-41d5-a735-755575f5b96d">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -60,14 +70,10 @@
         <seg>connection</seg>
         <seg>display_data_conn</seg>
       </bo>
-      <bendpoints>
-        <point x="999.0" y="252.99999999999994"/>
-        <point x="999.0" y="223.0"/>
-      </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="e48c6c88-01c5-4c16-a525-643ff60125a0">
-      <element uuid="f59e2720-0d4c-46aa-ae56-be9e0922fc77">
+    <element uuid="786da5bd-05b0-4b48-ba7d-2cb1cf000d2a">
+      <element uuid="143811c4-2bb8-4d93-bf33-627e557c1a08">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -79,14 +85,14 @@
         <seg>mic_bus_conn</seg>
       </bo>
       <bendpoints>
-        <point x="139.0" y="694.3333333333333"/>
-        <point x="175.0" y="694.3333333333333"/>
-        <point x="175.0" y="311.33333333333326"/>
+        <point x="139.0" y="522.0"/>
+        <point x="185.0" y="522.0"/>
+        <point x="185.0" y="345.6666666666667"/>
       </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="9cce79c8-2149-42c8-af30-83b82d3f3c81">
-      <element uuid="120b55e7-461b-4b0f-ba21-042448479777">
+    <element uuid="40ab8b03-f0c4-4cf5-9ed0-8f4a060d1343">
+      <element uuid="7792565b-e78f-408a-8846-5504d0f85441">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -99,8 +105,8 @@
       </bo>
       <contentFilters/>
     </element>
-    <element uuid="837124df-1aed-4588-b9b9-cd63b37f8e7e">
-      <element uuid="0ad3aaf7-92da-4402-8754-2c86aebe950d">
+    <element uuid="bc6a1686-3e19-467c-9b47-cc97e8a1ae93">
+      <element uuid="1e73d235-9010-4ab4-b130-2812facb8405">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -112,13 +118,13 @@
         <seg>mic_event_conn</seg>
       </bo>
       <bendpoints>
-        <point x="585.0" y="369.66666666666663"/>
-        <point x="585.0" y="336.33333333333326"/>
+        <point x="575.0" y="437.33333333333337"/>
+        <point x="575.0" y="370.6666666666667"/>
       </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="51094173-9bc2-45c2-9dc9-e6675ce7417b">
-      <element uuid="7934c0e1-8db9-4f26-aace-793cf11d862d">
+    <element uuid="f6ad8c76-25e0-41d7-8203-c519a3413417">
+      <element uuid="8e116a44-e52b-475c-81ae-b1059bcdc7c7">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -130,16 +136,14 @@
         <seg>monitor_bus_conn</seg>
       </bo>
       <bendpoints>
-        <point x="139.0" y="684.3333333333333"/>
-        <point x="165.0" y="684.3333333333333"/>
-        <point x="165.0" y="199.99999999999994"/>
-        <point x="999.0" y="199.99999999999994"/>
-        <point x="999.0" y="173.0"/>
+        <point x="139.0" y="532.0"/>
+        <point x="989.0" y="532.0"/>
+        <point x="989.0" y="554.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="95a7fcc0-722a-4c99-83be-e6c61d699e8b">
-      <element uuid="f7c3ef22-a4bb-498e-8d53-b6b4cd519332">
+    <element uuid="9e597bfa-5461-4caf-ad1a-40883b9a59b8">
+      <element uuid="20646d85-efc3-46df-ba0e-8c7abb37a67b">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -151,14 +155,16 @@
         <seg>peaker_bus_conn</seg>
       </bo>
       <bendpoints>
-        <point x="139.0" y="724.3333333333333"/>
-        <point x="999.0" y="724.3333333333333"/>
-        <point x="999.0" y="452.99999999999994"/>
+        <point x="139.0" y="512.0"/>
+        <point x="175.0" y="512.0"/>
+        <point x="175.0" y="201.0"/>
+        <point x="1009.0" y="201.0"/>
+        <point x="1009.0" y="274.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="6557d4a3-3b8a-4771-8999-005232e26295">
-      <element uuid="cf203944-4159-4e1d-bf04-9d2c02f9e6b5">
+    <element uuid="fcd98697-a08a-4426-b63b-53e125b047cb">
+      <element uuid="af119971-9a61-4cb9-8663-2f3b9540aa9d">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -170,14 +176,14 @@
         <seg>processor_bus_conn</seg>
       </bo>
       <bendpoints>
-        <point x="139.0" y="664.3333333333333"/>
-        <point x="145.0" y="664.3333333333333"/>
+        <point x="139.0" y="482.0"/>
+        <point x="145.0" y="482.0"/>
         <point x="145.0" y="92.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="b534b6ce-e014-47be-ad79-749f40ab18fd">
-      <element uuid="14dfa148-153c-45df-b4e6-38a43acfaee6">
+    <element uuid="ce9f7a33-8489-4aea-b000-d897537ca194">
+      <element uuid="07673304-21cf-43a0-afbe-377ef1e8ca43">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -189,14 +195,14 @@
         <seg>rom_conn</seg>
       </bo>
       <bendpoints>
-        <point x="139.0" y="674.3333333333333"/>
-        <point x="155.0" y="674.3333333333333"/>
-        <point x="155.0" y="172.0"/>
+        <point x="139.0" y="502.0"/>
+        <point x="165.0" y="502.0"/>
+        <point x="165.0" y="173.0"/>
       </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="9a068e3a-06e3-43b2-81fb-ecd515b2081d">
-      <element uuid="d4ac9944-0d9f-4d10-ba78-35d24de34873">
+    <element uuid="23ac0ae5-8eb7-4a75-93f9-71e3378cbd68">
+      <element uuid="1b4b58fa-4765-4ca8-a776-197723e8162b">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -207,10 +213,14 @@
         <seg>connection</seg>
         <seg>speaker_data_conn</seg>
       </bo>
+      <bendpoints>
+        <point x="989.0" y="354.0"/>
+        <point x="989.0" y="324.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="5d387361-e0c3-4f49-82f4-2788cc2510e1">
-      <element uuid="a1b883df-fa2e-4f42-86c1-b36c291f8ff7">
+    <element uuid="5be1ebf2-2817-4d46-a174-6b327b98c46e">
+      <element uuid="39beeb37-cbeb-4f47-a947-6ac993c018ad">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -221,10 +231,14 @@
         <seg>connection</seg>
         <seg>speaker_event_conn</seg>
       </bo>
+      <bendpoints>
+        <point x="989.0" y="404.0"/>
+        <point x="989.0" y="374.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="148e3bc8-a830-4517-81a6-85ade0a4d808">
-      <element uuid="e759dfd5-9c05-4e1a-98e0-e3bc4d203bf4">
+    <element uuid="2bcac1b3-cd19-42b3-88eb-182f84bbddcd">
+      <element uuid="e2ed639b-97b9-464a-83a3-e156327335e0">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -235,14 +249,10 @@
         <seg>connection</seg>
         <seg>touch_event_conn</seg>
       </bo>
-      <bendpoints>
-        <point x="999.0" y="273.0"/>
-        <point x="999.0" y="302.99999999999994"/>
-      </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="1fea7577-3b52-4c7f-a61d-7420b29cfc12">
-      <element uuid="db9e034d-4a25-4870-86c5-2d91bbce1f9e" dockArea="left">
+    <element uuid="09d7ef40-b3a5-420f-9b14-38f94744d3c4">
+      <element uuid="aa940f24-fd34-4452-87d0-3cafe715ad0e" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>busacc</seg>
@@ -250,28 +260,28 @@
         <position y="10.0"/>
         <contentFilters/>
       </element>
-      <element uuid="a4214dde-737c-4d40-a50c-343011a7f6f4" dockArea="right">
+      <element uuid="55de7e7e-3847-49c5-80e7-5b021f445adc" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>control</seg>
         </bo>
-        <position x="230.0" y="106.0"/>
+        <position y="60.0"/>
         <contentFilters/>
       </element>
-      <element uuid="1546b570-d85b-4e93-ac6f-95d8e01150c0" dockArea="right">
+      <element uuid="8c418d7e-6473-43f3-a8e9-4c2646f4a1d1" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>data_channel</seg>
         </bo>
-        <position x="192.0" y="46.0"/>
+        <position y="110.0"/>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>sys_bt_adapter</seg>
       </bo>
-      <position x="193.0" y="492.0"/>
-      <size width="292.0" height="210.0"/>
+      <position x="1007.0" y="40.0"/>
+      <size width="362.0" height="160.0"/>
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -280,13 +290,13 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="e404996a-b464-40d8-837e-751e1a069d2a">
+    <element uuid="1b7e70b1-823c-4f46-b255-68c94be06857">
       <bo>
         <seg>subcomponent</seg>
         <seg>sys_bus</seg>
       </bo>
-      <position x="12.0" y="642.0"/>
-      <size width="111.0" height="80.0"/>
+      <position x="12.0" y="460.0"/>
+      <size width="111.0" height="70.0"/>
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -295,48 +305,48 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="aea93c8b-cb6a-43c3-9935-74ac291b7239">
-      <element uuid="5a6e23eb-3268-41df-b807-2c0b9c97ee0c" dockArea="bottom">
+    <element uuid="3042a353-9647-4ea4-b471-394dd45655bf">
+      <element uuid="88d2704e-1cc4-4a6e-9df6-121a734d27f2" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>bt_control</seg>
         </bo>
-        <position x="225.0" y="221.0"/>
+        <position x="307.0" y="10.0"/>
         <contentFilters/>
       </element>
-      <element uuid="eba229ad-3e0e-498d-82ff-232ef3808a56" dockArea="bottom">
+      <element uuid="a43680a7-da3b-4888-b479-66e47532c920" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>bt_data</seg>
         </bo>
-        <position x="65.0" y="221.0"/>
+        <position x="325.0" y="60.0"/>
         <contentFilters/>
       </element>
-      <element uuid="1901927a-cedb-437e-9492-1617bbd5ba8a" dockArea="right">
+      <element uuid="fdd3411c-7fc9-4a4e-b05b-3dd0e6cc56e2" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>display_data</seg>
         </bo>
-        <position x="298.0" y="10.0"/>
+        <position x="298.0" y="210.0"/>
         <contentFilters/>
       </element>
-      <element uuid="d0963082-23e2-42f8-8acd-e6c71832db41" dockArea="left">
+      <element uuid="db701142-99e9-4c2c-bfa1-33bbe7ac808f" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>mic_control</seg>
         </bo>
-        <position y="127.0"/>
+        <position y="193.0"/>
         <contentFilters/>
       </element>
-      <element uuid="4d4bf945-b9ef-4668-88ca-ba07dd7c2d68" dockArea="left">
+      <element uuid="f148e607-549a-4653-a802-ed0338071d9d" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>mic_indata</seg>
         </bo>
-        <position y="43.0"/>
+        <position y="77.0"/>
         <contentFilters/>
       </element>
-      <element uuid="3aa5bdfd-f225-4642-93a0-b5bcc2fc5fa6" dockArea="right">
+      <element uuid="082edb9c-4f92-46b7-8090-4997f8770a78" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>speaker_control</seg>
@@ -344,7 +354,7 @@
         <position x="272.0" y="160.0"/>
         <contentFilters/>
       </element>
-      <element uuid="ec21fda1-151f-4fdb-9f21-8cb7eb851569" dockArea="right">
+      <element uuid="0d69d66d-02c0-407b-b0d9-a92fa22cc9f7" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>speaker_outdata</seg>
@@ -352,20 +362,20 @@
         <position x="271.0" y="110.0"/>
         <contentFilters/>
       </element>
-      <element uuid="bd4b7efe-e509-452d-ad42-e5c933179ee6" dockArea="right">
+      <element uuid="c81615fc-a328-4720-b6df-36c8b4d37d1c" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>touch_event</seg>
         </bo>
-        <position x="301.0" y="60.0"/>
+        <position x="301.0" y="260.0"/>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>sys_controller</seg>
       </bo>
-      <position x="583.0" y="199.0"/>
-      <size width="394.0" height="245.0"/>
+      <position x="573.0" y="200.0"/>
+      <size width="394.0" height="310.0"/>
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -374,8 +384,8 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="cc25b5d7-6508-49c5-b6c7-330b5c8fd237">
-      <element uuid="a7deb296-a0d1-4baa-8d52-9e3d1220a4fc" dockArea="left">
+    <element uuid="4371cdef-eb2f-4ebf-80c9-3072772116e0">
+      <element uuid="0c4affc9-667c-45ee-a75f-6074bfa77b3a" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>busacc</seg>
@@ -383,7 +393,7 @@
         <position y="35.0"/>
         <contentFilters/>
       </element>
-      <element uuid="6bb2a7af-0d2d-4c98-8100-e10408f3b42e" dockArea="right">
+      <element uuid="f8240edc-40f2-4273-b848-78fc9563756e" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>enable_mic</seg>
@@ -391,7 +401,7 @@
         <position x="281.0" y="60.0"/>
         <contentFilters/>
       </element>
-      <element uuid="7d6a44c6-0f40-4774-9383-7337ba2165f2" dockArea="right">
+      <element uuid="fd070260-838a-4abd-a9be-3ba50c2f08ea" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>record_sound</seg>
@@ -403,7 +413,7 @@
         <seg>subcomponent</seg>
         <seg>sys_microphone</seg>
       </bo>
-      <position x="178.0" y="218.0"/>
+      <position x="183.0" y="267.0"/>
       <size width="370.0" height="110.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -413,36 +423,36 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="52f6bd7a-d5b8-4fdb-bad0-bb48c5aec4c1">
-      <element uuid="0f838b8c-dc4a-4444-8e6a-14c4193ec058" dockArea="left">
+    <element uuid="00c4865b-6be2-401c-8174-c2864fc43a70">
+      <element uuid="f460f83a-0fe2-4d5b-a41a-0fcd5f407548" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>busacc</seg>
         </bo>
-        <position y="10.0"/>
+        <position y="110.0"/>
         <contentFilters/>
       </element>
-      <element uuid="8898155a-35f0-4564-b60a-78b302adedde" dockArea="left">
+      <element uuid="f9fe8d07-c83f-495f-9b4f-a9ff01d29aef" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>touch_detected</seg>
         </bo>
-        <position y="110.0"/>
+        <position y="60.0"/>
         <contentFilters/>
       </element>
-      <element uuid="9c3be199-6899-44ab-83ec-663342d3d5d9" dockArea="left">
+      <element uuid="b0539b38-fe19-4caa-b623-195bab111bad" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>update_display</seg>
         </bo>
-        <position y="60.0"/>
+        <position y="10.0"/>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>sys_monitor</seg>
       </bo>
-      <position x="997.0" y="119.0"/>
+      <position x="1007.0" y="400.0"/>
       <size width="360.0" height="160.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -452,8 +462,8 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="f96b8607-8321-4516-bd86-31f904999925">
-      <element uuid="e6de9d0a-b350-4239-93cb-4d596d188554" dockArea="left">
+    <element uuid="65d18221-0cfa-4358-a5fd-5507b9616268">
+      <element uuid="b43ef1b9-10dd-4404-83fa-9566db7a4b9a" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>busacc</seg>
@@ -465,7 +475,7 @@
         <seg>subcomponent</seg>
         <seg>sys_os</seg>
       </bo>
-      <position x="193.0" y="118.0"/>
+      <position x="183.0" y="119.0"/>
       <size width="237.0" height="60.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -475,8 +485,8 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="fd1df7dc-3cf4-4954-b53a-2eb69a1a33f4">
-      <element uuid="6cee997c-3d60-4a2d-94ad-94e1906c6c67" dockArea="left">
+    <element uuid="bac6802f-516a-4d02-a4aa-9d9a10443684">
+      <element uuid="6cf1e945-42ba-49a8-9bd7-90ca0bde0be8" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>busacc</seg>
@@ -488,7 +498,7 @@
         <seg>subcomponent</seg>
         <seg>sys_processor</seg>
       </bo>
-      <position x="193.0" y="38.0"/>
+      <position x="183.0" y="38.0"/>
       <size width="280.0" height="60.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -498,36 +508,36 @@
         <filter>flowSpecifications</filter>
       </contentFilters>
     </element>
-    <element uuid="e363502b-2a5d-4f3b-960a-f8f9caf34a87">
-      <element uuid="0b178c86-f576-4e2c-ae7f-a7d5c2276ced" dockArea="left">
+    <element uuid="2d6a1c90-a052-46da-8275-1ff0ddccbce4">
+      <element uuid="b53c0493-0486-49c2-8dcc-cc4374bdf832" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>busacc</seg>
         </bo>
-        <position y="110.0"/>
+        <position y="10.0"/>
         <contentFilters/>
       </element>
-      <element uuid="f02c95d3-ecf7-4fe4-8c8c-415fcaa38d39" dockArea="left">
+      <element uuid="63024c38-b885-4793-a92e-dd67791d5003" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>enable_speaker</seg>
         </bo>
-        <position y="60.0"/>
+        <position y="110.0"/>
         <contentFilters/>
       </element>
-      <element uuid="a3fd184d-ad86-4932-87d4-280eed6d18aa" dockArea="left">
+      <element uuid="8da5a35a-2e3b-4cd9-aa60-0377cf586391" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>play_sound</seg>
         </bo>
-        <position y="10.0"/>
+        <position y="60.0"/>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>sys_speaker</seg>
       </bo>
-      <position x="997.0" y="299.0"/>
+      <position x="1007.0" y="220.0"/>
       <size width="366.0" height="160.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -542,7 +552,7 @@
       <seg>infotainment_sys.with_devices</seg>
     </bo>
     <position x="12.0" y="12.0"/>
-    <size width="1375.0" height="734.0"/>
+    <size width="1385.0" height="572.0"/>
     <contentFilters>
       <filter>features</filter>
       <filter>internalFeatures</filter>

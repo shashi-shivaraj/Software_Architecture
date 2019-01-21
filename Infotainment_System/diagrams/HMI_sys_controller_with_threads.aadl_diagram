@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="0bb1e7f8-263b-4620-9b53-9152c657c820" manual="true">
+    <element uuid="aaa9fe65-c27f-42af-b914-01f048752023">
+      <element uuid="dd0b321b-d41c-4891-baee-3e7211c16205">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bt_data_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="2e3cff5b-879e-482d-adc8-798d2cdd5944">
+      <element uuid="c5e3d8fc-0553-468d-9422-aaa1f23abc08">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bt_evnt_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="6a83d118-68f0-4a77-bcae-3886ad195bb3">
+      <element uuid="48603e9f-b1b1-4d5d-8289-840fbbef00ff">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>display_conn</seg>
+      </bo>
+      <bendpoints>
+        <point x="1068.0" y="142.0"/>
+        <point x="1068.0" y="139.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element uuid="6c55f643-8299-4c06-938d-1deabe0e2e3e">
+      <element uuid="825c08fc-c3f5-4450-8bf1-7e5cbd5fe3de">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>hw_bt_data_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="8b24c69c-b1f2-4f85-acd2-119e7fd62c96">
+      <element uuid="120b7a75-59fa-49d2-a695-6ef81b1b9cff">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>hw_bt_evnt_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="0f468b43-1714-4ea3-9d8e-0f9817aa4138">
+      <element uuid="3d3dce8b-7c15-4619-8fff-25d9d798c859">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>hw_mic_data_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="0375df9b-372f-4d53-94e6-ffb4eb280326">
+      <element uuid="eabc6012-0b27-485c-b9e8-ebcd1bd5db17">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>hw_mic_evnt_conn</seg>
+      </bo>
+      <bendpoints>
+        <point x="665.0" y="92.0"/>
+        <point x="665.0" y="89.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element uuid="a5ba6b2d-05a0-4641-8411-40dfcdacaddd">
+      <element uuid="423dec83-b761-4346-9bd9-fcf9e0b451fd">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>mic_data_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="7956d424-2fc3-42ae-9458-7196191afe90">
+      <element uuid="a8552219-6a02-4c7d-b125-a2dc3b757ea0">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>mic_evnt_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="2f1c2b91-c187-4f80-814f-88b76438d4f4">
+      <element uuid="225ae240-13c4-4119-9f5b-630ea690a3e3">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>touch_event_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="1d970d4d-8bad-4879-aed3-67138ce91cff">
+      <element uuid="4cf0065b-29da-4b01-912f-f7b7cf35a34d">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>touch_notify</seg>
+      </bo>
+      <bendpoints>
+        <point x="665.0" y="272.0"/>
+        <point x="665.0" y="242.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element uuid="9ddc8a8e-0dc7-4d7c-abee-b45541484a9d" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>bt_control</seg>
+      </bo>
+      <position x="1637.0" y="198.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="402e42e9-5c55-4835-8018-afbfd77b3973" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>bt_data</seg>
+      </bo>
+      <position x="1655.0" y="148.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="c692a7b9-05d3-4c89-85bf-dc1440fdff76" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>display_data</seg>
+      </bo>
+      <position x="1628.0" y="95.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="ca77f7c4-24a0-4b4a-acde-ac3cf7d54983" dockArea="right">
+      <bo>
+        <seg>feature</seg>
+        <seg>mic_control</seg>
+      </bo>
+      <position x="1630.0" y="45.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="7dd32de6-e932-4313-a8ee-272e3fb99cc9" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>mic_indata</seg>
+      </bo>
+      <position y="98.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="40c0ae3a-0628-473c-98df-450131a30777" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>speaker_control</seg>
+      </bo>
+      <position y="342.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="833d186e-21ee-45ed-ad64-45117e6de946" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>speaker_outdata</seg>
+      </bo>
+      <position y="290.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="a7455be0-44ba-41e3-9b90-5d16d1e1c075" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>touch_event</seg>
+      </bo>
+      <position y="228.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="a03f14de-dfaf-45a2-8e43-0359d30c6759">
+      <element uuid="f99221b4-4c0b-4fc9-b947-5390ca7c0e45" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bt_connection_event</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="389ed6f6-d897-4124-8d1a-268fa81fc5f2" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bt_data_conn</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="b0d95244-c08a-4283-9236-30800f983006" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>bt_hw_connection_event</seg>
+        </bo>
+        <position x="334.0" y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="38197fe9-0927-48be-925c-b5514597d345" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>bt_hw_data_conn</seg>
+        </bo>
+        <position x="386.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>bt_controller</seg>
+      </bo>
+      <position x="1066.0" y="138.0"/>
+      <size width="523.0" height="110.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="72c809a9-616c-4b54-9a0a-7ac096350f1d">
+      <element uuid="c9c49677-e81a-463a-939a-ad01c8bbe2f1" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>bt_data</seg>
+        </bo>
+        <position x="314.0" y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="b907c983-fa4c-4b35-980d-3ba94316b481" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>bt_event</seg>
+        </bo>
+        <position x="307.0" y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="1b6cf13a-88a7-4413-9643-d8bad6def01c" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>mic_data</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="1793ebff-5196-4c51-bf77-dbe4a45539b8" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>mic_event</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="5bdc197e-7204-4a35-a5a3-16c2ed254bab" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>touch_event</seg>
+        </bo>
+        <position y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="af3c7cd0-a301-4cd0-ba8c-862a2248abca" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>update_display</seg>
+        </bo>
+        <position x="271.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>main_controller</seg>
+      </bo>
+      <position x="663.0" y="88.0"/>
+      <size width="383.0" height="160.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="b67ed28d-54c1-4c2b-abc1-1b6834b42f2c">
+      <element uuid="6ecb3a60-c05c-487e-803b-3ce9ab508dc2" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>mic_connection_event</seg>
+        </bo>
+        <position x="376.0" y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="7e994faf-f58f-4edd-ac24-91de96b95ff1" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>mic_data_conn</seg>
+        </bo>
+        <position x="426.0" y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="bf8334c2-7dbd-4ed1-874e-ff52783d4361" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>mic_hw_connection_event</seg>
+        </bo>
+        <position x="343.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="1d055b76-5202-41e1-867d-073c443f1e3f" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>mic_hw_data_conn</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>mic_controller</seg>
+      </bo>
+      <position x="106.0" y="38.0"/>
+      <size width="537.0" height="160.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="1246c4e3-59b8-43b7-bae7-fd3e7c6eea56">
+      <element uuid="e1dc9dff-ba3d-4760-be8e-7d495288d74c" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>notify_touch</seg>
+        </bo>
+        <position x="289.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="aa991bfd-4ee2-4075-a84e-89e82c7e13c3" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>touch_event_in</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>touch_detection</seg>
+      </bo>
+      <position x="183.0" y="218.0"/>
+      <size width="384.0" height="60.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>sys_controller.with_threads</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="1724.0" height="394.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>hmi::sys_controller.with_threads</seg>
+    </context>
+  </config>
+</diagram:Diagram>

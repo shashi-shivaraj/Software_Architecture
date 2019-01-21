@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
   <element uuid="0bb1e7f8-263b-4620-9b53-9152c657c820" manual="true">
+    <element uuid="6b761891-77e6-494a-a377-08ad9abea061">
+      <element uuid="4d02437d-dd7a-4ea3-9bb6-15e92f09dfb1">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>audio_evnt_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
     <element uuid="aaa9fe65-c27f-42af-b914-01f048752023">
       <element uuid="dd0b321b-d41c-4891-baee-3e7211c16205">
         <bo>
@@ -47,6 +61,20 @@
       </bendpoints>
       <contentFilters/>
     </element>
+    <element uuid="5a1bd7a7-91c5-42ec-a843-0fa2b233e7a5">
+      <element uuid="9bff02b3-3307-445f-b601-48167c0fa3cf">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>hw_audio_evnt_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
     <element uuid="6c55f643-8299-4c06-938d-1deabe0e2e3e">
       <element uuid="825c08fc-c3f5-4450-8bf1-7e5cbd5fe3de">
         <bo>
@@ -75,8 +103,8 @@
       </bo>
       <contentFilters/>
     </element>
-    <element uuid="0f468b43-1714-4ea3-9d8e-0f9817aa4138">
-      <element uuid="3d3dce8b-7c15-4619-8fff-25d9d798c859">
+    <element uuid="e9282a7a-9852-426c-82a7-f7ea0be447f6">
+      <element uuid="cbbda035-0d76-46d7-a227-18a64e51b2c7">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -89,8 +117,8 @@
       </bo>
       <contentFilters/>
     </element>
-    <element uuid="0375df9b-372f-4d53-94e6-ffb4eb280326">
-      <element uuid="eabc6012-0b27-485c-b9e8-ebcd1bd5db17">
+    <element uuid="ad9db0da-8327-4651-b8aa-49c90a26175d">
+      <element uuid="94dacf92-e13d-4db9-a9e2-d98eaa500f11">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -99,16 +127,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>hw_mic_evnt_conn</seg>
+        <seg>hw_speaker_data_conn</seg>
       </bo>
-      <bendpoints>
-        <point x="665.0" y="92.0"/>
-        <point x="665.0" y="89.0"/>
-      </bendpoints>
       <contentFilters/>
     </element>
-    <element uuid="a5ba6b2d-05a0-4641-8411-40dfcdacaddd">
-      <element uuid="423dec83-b761-4346-9bd9-fcf9e0b451fd">
+    <element uuid="63df9949-b865-4b96-b8ee-e625e6e0e144">
+      <element uuid="01728553-2987-4e20-b267-b46ce93fcb68">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -121,8 +145,8 @@
       </bo>
       <contentFilters/>
     </element>
-    <element uuid="7956d424-2fc3-42ae-9458-7196191afe90">
-      <element uuid="a8552219-6a02-4c7d-b125-a2dc3b757ea0">
+    <element uuid="8a5c9082-2333-4da4-8605-ed00a65b97d5">
+      <element uuid="d6e2abe9-61e6-44dd-8889-a120620bf5f9">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -131,8 +155,12 @@
       </element>
       <bo>
         <seg>connection</seg>
-        <seg>mic_evnt_conn</seg>
+        <seg>speaker_data_conn</seg>
       </bo>
+      <bendpoints>
+        <point x="821.0" y="348.0"/>
+        <point x="726.0" y="348.0"/>
+      </bendpoints>
       <contentFilters/>
     </element>
     <element uuid="2f1c2b91-c187-4f80-814f-88b76438d4f4">
@@ -162,9 +190,16 @@
         <seg>touch_notify</seg>
       </bo>
       <bendpoints>
-        <point x="665.0" y="272.0"/>
-        <point x="665.0" y="242.0"/>
+        <point x="982.0" y="340.0"/>
       </bendpoints>
+      <contentFilters/>
+    </element>
+    <element uuid="c12d91ca-03a0-4b43-ac28-147bc65b6c06" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>audio_control</seg>
+      </bo>
+      <position y="49.0"/>
       <contentFilters/>
     </element>
     <element uuid="9ddc8a8e-0dc7-4d7c-abee-b45541484a9d" dockArea="right">
@@ -191,28 +226,12 @@
       <position x="1628.0" y="95.0"/>
       <contentFilters/>
     </element>
-    <element uuid="ca77f7c4-24a0-4b4a-acde-ac3cf7d54983" dockArea="right">
-      <bo>
-        <seg>feature</seg>
-        <seg>mic_control</seg>
-      </bo>
-      <position x="1630.0" y="45.0"/>
-      <contentFilters/>
-    </element>
     <element uuid="7dd32de6-e932-4313-a8ee-272e3fb99cc9" dockArea="left">
       <bo>
         <seg>feature</seg>
         <seg>mic_indata</seg>
       </bo>
-      <position y="98.0"/>
-      <contentFilters/>
-    </element>
-    <element uuid="40c0ae3a-0628-473c-98df-450131a30777" dockArea="left">
-      <bo>
-        <seg>feature</seg>
-        <seg>speaker_control</seg>
-      </bo>
-      <position y="342.0"/>
+      <position y="173.0"/>
       <contentFilters/>
     </element>
     <element uuid="833d186e-21ee-45ed-ad64-45117e6de946" dockArea="left">
@@ -223,13 +242,76 @@
       <position y="290.0"/>
       <contentFilters/>
     </element>
-    <element uuid="a7455be0-44ba-41e3-9b90-5d16d1e1c075" dockArea="left">
+    <element uuid="a7455be0-44ba-41e3-9b90-5d16d1e1c075" dockArea="right">
       <bo>
         <seg>feature</seg>
         <seg>touch_event</seg>
       </bo>
-      <position y="228.0"/>
+      <position x="1631.0" y="308.0"/>
       <contentFilters/>
+    </element>
+    <element uuid="f19c03e7-4f24-48a3-87ee-469aa6d8bfaa">
+      <element uuid="1b6daf7e-2dd7-4514-aa59-805a1d9a236a" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>audio_connection_event</seg>
+        </bo>
+        <position x="208.0" y="99.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="0d91a3d1-3668-475b-b847-5b2ab6d8230b" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>audio_hw_connection_event</seg>
+        </bo>
+        <position y="21.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="bed0a144-8e94-4c67-8306-f7d3cb5f9a3e" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>mic_data_conn</seg>
+        </bo>
+        <position x="276.0" y="160.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="c95f1433-3017-4dd3-b7ec-d6a34c13c274" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>mic_hw_data_conn</seg>
+        </bo>
+        <position y="138.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="8d7de16a-eec2-4085-8f74-4d91b1f688bc" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>speaker_data_conn</seg>
+        </bo>
+        <position x="246.0" y="267.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="0deba900-f73a-4196-b00c-09226fb086e7" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>speaker_hw_data_conn</seg>
+        </bo>
+        <position y="247.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>audio_controller</seg>
+      </bo>
+      <position x="198.0" y="31.0"/>
+      <size width="387.0" height="338.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
     </element>
     <element uuid="a03f14de-dfaf-45a2-8e43-0359d30c6759">
       <element uuid="f99221b4-4c0b-4fc9-b947-5390ca7c0e45" dockArea="left">
@@ -279,6 +361,13 @@
       </contentFilters>
     </element>
     <element uuid="72c809a9-616c-4b54-9a0a-7ac096350f1d">
+      <element uuid="a173415d-c5ff-42eb-82c6-3bc94a3ecd2d" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>audio_event</seg>
+        </bo>
+        <contentFilters/>
+      </element>
       <element uuid="c9c49677-e81a-463a-939a-ad01c8bbe2f1" dockArea="right">
         <bo>
           <seg>feature</seg>
@@ -303,20 +392,20 @@
         <position y="60.0"/>
         <contentFilters/>
       </element>
-      <element uuid="1793ebff-5196-4c51-bf77-dbe4a45539b8" dockArea="left">
+      <element uuid="dee02901-d479-4d82-86b6-a4bbbf005916" dockArea="bottom">
         <bo>
           <seg>feature</seg>
-          <seg>mic_event</seg>
+          <seg>speaker_data</seg>
         </bo>
-        <position y="10.0"/>
+        <position x="35.0" y="171.0"/>
         <contentFilters/>
       </element>
-      <element uuid="5bdc197e-7204-4a35-a5a3-16c2ed254bab" dockArea="left">
+      <element uuid="5bdc197e-7204-4a35-a5a3-16c2ed254bab" dockArea="bottom">
         <bo>
           <seg>feature</seg>
           <seg>touch_event</seg>
         </bo>
-        <position y="110.0"/>
+        <position x="206.0" y="171.0"/>
         <contentFilters/>
       </element>
       <element uuid="af3c7cd0-a301-4cd0-ba8c-862a2248abca" dockArea="right">
@@ -332,54 +421,7 @@
         <seg>main_controller</seg>
       </bo>
       <position x="663.0" y="88.0"/>
-      <size width="383.0" height="160.0"/>
-      <contentFilters>
-        <filter>features</filter>
-        <filter>internalFeatures</filter>
-        <filter>processorFeatures</filter>
-        <filter>connections</filter>
-        <filter>flowSpecifications</filter>
-      </contentFilters>
-    </element>
-    <element uuid="b67ed28d-54c1-4c2b-abc1-1b6834b42f2c">
-      <element uuid="6ecb3a60-c05c-487e-803b-3ce9ab508dc2" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>mic_connection_event</seg>
-        </bo>
-        <position x="376.0" y="60.0"/>
-        <contentFilters/>
-      </element>
-      <element uuid="7e994faf-f58f-4edd-ac24-91de96b95ff1" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>mic_data_conn</seg>
-        </bo>
-        <position x="426.0" y="110.0"/>
-        <contentFilters/>
-      </element>
-      <element uuid="bf8334c2-7dbd-4ed1-874e-ff52783d4361" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>mic_hw_connection_event</seg>
-        </bo>
-        <position x="343.0" y="10.0"/>
-        <contentFilters/>
-      </element>
-      <element uuid="1d055b76-5202-41e1-867d-073c443f1e3f" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>mic_hw_data_conn</seg>
-        </bo>
-        <position y="60.0"/>
-        <contentFilters/>
-      </element>
-      <bo>
-        <seg>subcomponent</seg>
-        <seg>mic_controller</seg>
-      </bo>
-      <position x="106.0" y="38.0"/>
-      <size width="537.0" height="160.0"/>
+      <size width="383.0" height="195.0"/>
       <contentFilters>
         <filter>features</filter>
         <filter>internalFeatures</filter>
@@ -389,27 +431,27 @@
       </contentFilters>
     </element>
     <element uuid="1246c4e3-59b8-43b7-bae7-fd3e7c6eea56">
-      <element uuid="e1dc9dff-ba3d-4760-be8e-7d495288d74c" dockArea="right">
+      <element uuid="e1dc9dff-ba3d-4760-be8e-7d495288d74c" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>notify_touch</seg>
         </bo>
-        <position x="289.0" y="10.0"/>
+        <position y="10.0"/>
         <contentFilters/>
       </element>
-      <element uuid="aa991bfd-4ee2-4075-a84e-89e82c7e13c3" dockArea="left">
+      <element uuid="aa991bfd-4ee2-4075-a84e-89e82c7e13c3" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>touch_event_in</seg>
         </bo>
-        <position y="10.0"/>
+        <position x="272.0" y="10.0"/>
         <contentFilters/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>touch_detection</seg>
       </bo>
-      <position x="183.0" y="218.0"/>
+      <position x="1118.0" y="298.0"/>
       <size width="384.0" height="60.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -424,7 +466,7 @@
       <seg>sys_controller.with_threads</seg>
     </bo>
     <position x="12.0" y="12.0"/>
-    <size width="1724.0" height="394.0"/>
+    <size width="1724.0" height="509.0"/>
     <contentFilters>
       <filter>features</filter>
       <filter>internalFeatures</filter>

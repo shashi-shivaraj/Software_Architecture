@@ -14,8 +14,7 @@ system implementation infotainment_sys.with_devices
 		sys_bus : bus Hardware::DefaultBus;
 		sys_BT_Adapter : device Hardware::Bluetooth_adapter;
 		sys_Monitor : device HMI::TouchScreen;
-		sys_Microphone : device HMI::Microphone;
-		sys_Speaker : device HMI::Speaker;
+		sys_Audio: device HMI::Audio;
 		sys_controller : process HMI::sys_controller.with_threads;
 		sys_OS : memory Hardware::ROM;
 	
@@ -23,17 +22,15 @@ system implementation infotainment_sys.with_devices
 		processor_bus_conn : bus access sys_bus->sys_processor.busAcc;
 		BT_bus_conn: bus access sys_bus->sys_BT_Adapter.busAcc;
 		Monitor_bus_conn : bus access sys_bus->sys_Monitor.busAcc;
-		Mic_bus_conn : bus access sys_bus->sys_Microphone.busAcc;
-	    peaker_bus_conn : bus access sys_bus->sys_Speaker.busAcc;
+		Audio_bus : bus access sys_bus->sys_Audio.busAcc;
 	    ROM_conn : bus access sys_bus->sys_OS.busAcc;
 	    
 	    --outport->inport
 	    touch_event_conn: port sys_Monitor.touch_detected->sys_controller.touch_event;
 	    display_data_conn: port sys_controller.display_data->sys_Monitor.update_display;
-	    mic_event_conn: port sys_controller.Mic_Control->sys_Microphone.enable_mic;
-	    mic_data_conn: port sys_Microphone.record_sound->sys_controller.Mic_inData;
-	    speaker_event_conn: port sys_controller.Speaker_Control->sys_Speaker.enable_speaker;
-	    speaker_data_conn: port sys_controller.Speaker_outData->sys_Speaker.play_sound;
+	    Audio_event_conn: port sys_controller.Audio_Control->sys_Audio.config_audio;
+	    mic_data_conn: port sys_Audio.record_sound->sys_controller.Mic_inData;
+	    speaker_data_conn: port sys_controller.Speaker_outData->sys_Audio.play_sound;
 		BT_event_conn: port sys_controller.BT_control->sys_BT_Adapter.control;
 		BT_data_comm: port sys_controller.BT_data->sys_BT_Adapter.data_channel;
 		

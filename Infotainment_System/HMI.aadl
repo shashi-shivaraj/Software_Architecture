@@ -4,7 +4,7 @@ public
 	with Software;
 	with DataTypes;
 	
-device TouchScreen
+device TouchScreen -- device to get the user input via touch
 	features
 		touch_detected: out event port ;
 		update_display: in data port DataTypes::Image;
@@ -13,7 +13,7 @@ device TouchScreen
 		display_signal : flow sink update_display;
 end TouchScreen;
 
-device Audio
+device Audio -- device used to record user input via audio and play audio data back to user
 	features
 		record_sound : out data port DataTypes::AudioData;
 		config_audio : in out event port ;
@@ -24,7 +24,7 @@ device Audio
 		speaker_signal: flow sink play_sound;
 end Audio;
 
-process sys_controller
+process sys_controller -- main processing unit of the system.
 	features
 	touch_event: in event port;
 	Mic_inData : in  data port DataTypes::AudioData;
@@ -40,7 +40,7 @@ process sys_controller
 end sys_controller;
 		
 
-process implementation sys_controller.with_threads
+process implementation sys_controller.with_threads -- implements threads for each related functionality
 	subcomponents
 		main_controller: thread Main_Controller.impl;
 		touch_detection: thread Touch_Detected.impl; 
@@ -68,7 +68,7 @@ process implementation sys_controller.with_threads
 				
 end sys_controller.with_threads;
 
-thread Main_Controller
+thread Main_Controller --main thread of the system
 	features
 		touch_event : in event port;
 		update_display : out data port;
@@ -88,7 +88,7 @@ thread implementation Main_Controller.impl
 	
 end Main_Controller.impl;
 
-thread Touch_Detected
+thread Touch_Detected --notifies the system of the user input via touch  
 	features
 		touch_event_in : in event port;
 		notify_touch : out event port;
@@ -97,8 +97,8 @@ end Touch_Detected;
 thread implementation Touch_Detected.impl
 	
 end Touch_Detected.impl;
-
-thread BT_Manager
+ 
+thread BT_Manager --performs the BT functionalities
 	features 
 		BT_connection_event : in out event port;
 		BT_data_conn : in out data port;
@@ -112,7 +112,7 @@ thread implementation BT_Manager.impl
 		
 end BT_Manager.impl;
 
-thread Audio_Manager
+thread Audio_Manager --performs the Audio functionalities
 	features 
 		Audio_connection_event : in out event port;
 		Speaker_data_conn : in data port;

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="5e9332ff-2144-42b2-8ff0-716bd4f2e404" manual="true">
+    <element uuid="8daa3d7a-4dc0-4dd5-ab7a-b86ba3ab572c">
+      <bo>
+        <seg>classifier</seg>
+        <seg>display_application</seg>
+      </bo>
+      <position x="86.0" y="85.0"/>
+      <size width="185.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="e472fd81-6551-40e8-abe8-7675382be64d">
+      <bo>
+        <seg>classifier</seg>
+        <seg>middlewear</seg>
+      </bo>
+      <position x="86.0" y="38.0"/>
+      <size width="129.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>software</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="283.0" height="132.0"/>
+    <contentFilters>
+      <filter>classifiers</filter>
+    </contentFilters>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>software</seg>
+    </context>
+  </config>
+</diagram:Diagram>

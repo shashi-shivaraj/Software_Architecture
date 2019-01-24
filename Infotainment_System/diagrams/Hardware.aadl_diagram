@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="e1a928e9-8e74-4637-a61e-0ab53576cd40" manual="true">
+    <element uuid="66c23c1e-7f20-4e00-9c14-d5d06b81ae30">
+      <bo>
+        <seg>classifier</seg>
+        <seg>bluetooth_adapter</seg>
+      </bo>
+      <position x="91.0" y="85.0"/>
+      <size width="177.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="c4ba9671-4c5d-4a85-9a00-00259b053abd">
+      <bo>
+        <seg>classifier</seg>
+        <seg>can_controller</seg>
+      </bo>
+      <position x="301.0" y="226.0"/>
+      <size width="155.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="8aa7b0da-4685-409e-8983-23be09964fc5">
+      <element uuid="dc2234e8-b4bf-49f2-b8b0-5c9924115db0">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="297.0" y="255.5"/>
+          <point x="309.0" y="255.5"/>
+        </bendpoints>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>can_controller.impl</seg>
+      </bo>
+      <position x="91.0" y="226.0"/>
+      <size width="190.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="f49d2a9e-8a29-45d4-aa35-cb687031554c">
+      <bo>
+        <seg>classifier</seg>
+        <seg>defaultbus</seg>
+      </bo>
+      <position x="267.0" y="132.0"/>
+      <size width="124.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="3066e38f-0040-47c3-bad4-eba205e537b5">
+      <element uuid="242d12df-0630-46eb-963d-8301989fd1b9">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="263.0" y="161.5"/>
+          <point x="275.0" y="161.5"/>
+        </bendpoints>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>defaultbus.impl</seg>
+      </bo>
+      <position x="91.0" y="132.0"/>
+      <size width="156.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="dde02ffe-0550-4457-96ba-23e6599c2a97">
+      <bo>
+        <seg>classifier</seg>
+        <seg>mainprocessor</seg>
+      </bo>
+      <position x="299.0" y="179.0"/>
+      <size width="153.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="2e2e0d11-1b2f-4da6-a67d-305dc19765ee">
+      <element uuid="c2b158f9-1d2d-4c87-bee1-65fa7c254cd6">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="295.0" y="208.5"/>
+          <point x="307.0" y="208.5"/>
+        </bendpoints>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>mainprocessor.impl</seg>
+      </bo>
+      <position x="91.0" y="179.0"/>
+      <size width="188.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="3e055352-5504-416d-a5af-2c7755308f99">
+      <bo>
+        <seg>classifier</seg>
+        <seg>ram</seg>
+      </bo>
+      <position x="194.0" y="38.0"/>
+      <size width="91.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="6c8e657d-515d-48aa-b9ce-ad85fe3e00f2">
+      <bo>
+        <seg>classifier</seg>
+        <seg>rom</seg>
+      </bo>
+      <position x="91.0" y="38.0"/>
+      <size width="91.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <element uuid="73ab0780-5bed-4a4b-816c-872ce8e5911c">
+      <bo>
+        <seg>classifier</seg>
+        <seg>storage</seg>
+      </bo>
+      <position x="297.0" y="38.0"/>
+      <size width="108.0" height="35.0"/>
+      <contentFilters>
+        <filter>generalizations</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>hardware</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="468.0" height="273.0"/>
+    <contentFilters>
+      <filter>classifiers</filter>
+    </contentFilters>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>hardware</seg>
+    </context>
+  </config>
+</diagram:Diagram>

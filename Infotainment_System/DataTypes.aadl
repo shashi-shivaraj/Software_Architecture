@@ -1,12 +1,12 @@
 package DataTypes
 public
 	
-	data AudioData
+	data AudioData -- data used in Audio system
 		properties
 			Data_Size => 320 Bytes; --20ms 16bit PCM data
 	end AudioData;
 	
-	data Image
+	data Image -- data used in display system
 		properties
 			Data_Size => 2457600 Bytes;	--320x240 RGBA Image
 	end Image;

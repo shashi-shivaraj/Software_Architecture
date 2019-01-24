@@ -1,18 +1,19 @@
 package infotainment_system
 public
-
+--import the external packages
 with HMI;
 with Hardware;
 with software;
 with SEI;
 
+--define the system
 system infotainment_sys
 	features
 		power: in feature;
 		display :out feature;
 	properties
 		SEI::PowerBudget => 2.5 w applies to power;
-		
+	--system error handling	
 	annex emv2 {**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 				use types ErrorLibrary;
 				use behavior ErrorLibrary::FailStop;
@@ -31,18 +32,19 @@ system infotainment_sys
 				
 end infotainment_sys;
 
+--implementation of the system design
 system implementation infotainment_sys.with_devices
-	subcomponents
+	subcomponents --subcomponents used to build the system
 		sys_processor : processor Hardware::MainProcessor.impl; --processor with RAM
-		sys_bus : bus Hardware::DefaultBus;
-		sys_BT_Adapter : device Hardware::Bluetooth_adapter;
-		sys_Monitor : device HMI::TouchScreen;
-		sys_Audio: device HMI::Audio;
-		sys_controller : process HMI::sys_controller.with_threads;
-		sys_OS : memory Hardware::ROM;
-		Disp_Application:subprogram Software::Display_Application;
+		sys_bus : bus Hardware::DefaultBus; --bus for connection
+		sys_BT_Adapter : device Hardware::Bluetooth_adapter; --BT device
+		sys_Monitor : device HMI::TouchScreen; --Monitor for HMI
+		sys_Audio: device HMI::Audio; --Audio system
+		sys_controller : process HMI::sys_controller.with_threads; --Central system process
+		sys_OS : memory Hardware::ROM; --non volatile system OS storage
+		Disp_Application:subprogram Software::Display_Application; --GUI application
 	
-	connections
+	connections --connect the required subcomponents as per the system design
 		processor_bus_conn : bus access sys_bus->sys_processor.busAcc;
 		BT_bus_conn: bus access sys_bus->sys_BT_Adapter.busAcc;
 		Monitor_bus_conn : bus access sys_bus->sys_Monitor.busAcc;

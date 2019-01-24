@@ -1,7 +1,7 @@
 package Hardware
 public	
-	
-	memory RAM
+		
+	memory RAM -- for the processor
 	features
 	busAcc: requires bus access DefaultBus.impl;	
 	datain: in data port;
@@ -9,7 +9,7 @@ public
 	control: in event port;
 	end RAM;
 	
-	memory Storage
+	memory Storage --for the file system
 	features
 	busAcc: requires bus access DefaultBus.impl;
 	datain: in data port;
@@ -17,19 +17,19 @@ public
 	control: in event port;
 	end Storage;
 	
-	memory ROM
+	memory ROM -- for the OS/firmware
 	features
 	busAcc: requires bus access DefaultBus.impl;
 	end ROM;
 	
-	device Bluetooth_adapter
+	device Bluetooth_adapter --for blue-tooth connectivity
 	features
 	busAcc: requires bus access DefaultBus.impl;
 	data_channel: in out data port;
 	control: in event port; 	
 	end Bluetooth_adapter;
 	
-	bus CAN_Controller
+	bus CAN_Controller --for interfacing with the external devices
 	end CAN_Controller;
 	bus implementation CAN_Controller.impl 
 	

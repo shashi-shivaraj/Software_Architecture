@@ -1,15 +1,22 @@
+Name: Shashi Shivaraju
+email: shonnah@g.clemson.edu
+XID : C88650674
+
 AADL model for an Infotainment system architecture.
 AADL Model has been designed using layered architectural style.
 
-Notes/Issues:
-1)Assuming the system has suitable power supply adapter connected to the Motherboard 
+Notes/TODO:
+1)Assuming the system has suitable external power supply adapter connected to the Motherboard 
 of the system and thus in turn provides power to all hardware subcomponents.
+Did not add a power adapter as an hardware in the considered system
 
-2)
+2)[TODO]:Add more error handling cases for system failures and its handing.
 
-TODO Activities:
- 
+3)[TODO]:Further divide the application software and the middle-ware software into subcomponents.
+
+4)[TODO]:Define the response time criteria for the system.
 
 References:
 https://wiki.sei.cmu.edu/aadl/images/a/ac/Aadlsheet_letter.pdf
+https://github.com/osate/alisa-examples/tree/master/SimpleControlSystem
 https://www.youtube.com/playlist?list=PLmn-uL3-8Pm8b_uoPNv1Gkj8RkOcXFGBC

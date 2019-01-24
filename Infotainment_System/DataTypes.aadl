@@ -1,0 +1,14 @@
+package DataTypes
+public
+	
+	data AudioData
+		properties
+			Data_Size => 320 Bytes; --20ms 16bit PCM data
+	end AudioData;
+	
+	data Image
+		properties
+			Data_Size => 2457600 Bytes;	--320x240 RGBA Image
+	end Image;
+
+end DataTypes;

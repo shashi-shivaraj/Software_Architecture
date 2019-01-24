@@ -2,31 +2,41 @@ package HMI
 public
 	with Hardware;
 	with Software;
+	with DataTypes;
 	
 device TouchScreen
 	features
-		touch_detected: out event port;
-		update_display: in data port;
+		touch_detected: out event port ;
+		update_display: in data port DataTypes::Image;
 		busAcc : requires bus access Hardware::DefaultBus.impl ;
+	flows
+		display_signal : flow sink update_display;
 end TouchScreen;
 
 device Audio
 	features
-		record_sound : out data port;
-		config_audio : in out event port;
-		play_sound : in data port;
+		record_sound : out data port DataTypes::AudioData;
+		config_audio : in out event port ;
+		play_sound : in data port DataTypes::AudioData;
 		busAcc : requires bus access Hardware::DefaultBus.impl ;
+	flows 
+		mic_signal: flow source record_sound;
+		speaker_signal: flow sink play_sound;
 end Audio;
 
 process sys_controller
 	features
 	touch_event: in event port;
-	Mic_inData : in  data port;
+	Mic_inData : in  data port DataTypes::AudioData;
 	Audio_Control : in out event port;
-	Speaker_outData : out data port;
-	display_data: out data port;
+	Speaker_outData : out data port DataTypes::AudioData;
+	display_data: out data port DataTypes::Image;
 	BT_control : out event port;
 	BT_data : in out data port;
+	flows
+		mic_input_signal : flow sink Mic_inData;
+		speaker_out_signal: flow source Speaker_outData;
+		display_out_signal : flow source display_data;
 end sys_controller;
 		
 
@@ -41,7 +51,7 @@ process implementation sys_controller.with_threads
 	connections	
 		touch_event_conn : port touch_event->touch_detection.touch_event_in;
 		touch_notify : port touch_detection.notify_touch->main_controller.touch_event;
-		display_conn : port main_controller.update_display -> display_data;
+		--display_conn : port main_controller.update_display -> display_data;
 		
 		BT_evnt_conn : port main_controller.BT_event->BT_controller.BT_connection_event;
 		BT_data_conn : port main_controller.BT_data->BT_controller.BT_data_conn;
@@ -53,8 +63,8 @@ process implementation sys_controller.with_threads
 		HW_Audio_evnt_conn : port Audio_controller.Audio_HW_connection_event->Audio_Control;
 		Mic_data_conn : port Audio_controller.Mic_data_conn->main_controller.Mic_Data;
 		Speaker_data_conn : port main_controller.Speaker_Data->Audio_controller.Speaker_data_conn;
-		HW_Mic_data_conn : port Mic_inData->Audio_controller.Mic_HW_data_conn;
-		HW_Speaker_data_conn : port Audio_controller.Speaker_HW_data_conn->Speaker_outData;
+		--HW_Mic_data_conn : port Mic_inData->Audio_controller.Mic_HW_data_conn;
+		--HW_Speaker_data_conn : port Audio_controller.Speaker_HW_data_conn->Speaker_outData;
 				
 end sys_controller.with_threads;
 

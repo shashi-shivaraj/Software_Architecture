@@ -4,8 +4,31 @@ public
 with HMI;
 with Hardware;
 with software;
+with SEI;
 
 system infotainment_sys
+	features
+		power: in feature;
+		display :out feature;
+	properties
+		SEI::PowerBudget => 2.5 w applies to power;
+		
+	annex emv2 {**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+				use types ErrorLibrary;
+				use behavior ErrorLibrary::FailStop;
+				error propagations
+					display: out propagation {ServiceOmission};
+					flows
+						es1: error source display;
+				end propagations;
+				properties
+				emv2::hazards => 
+					([failure => "No Display";
+						description => "No info to display";
+					])
+					applies to display;
+					**};
+				
 end infotainment_sys;
 
 system implementation infotainment_sys.with_devices

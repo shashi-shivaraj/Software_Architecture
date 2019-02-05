@@ -50,6 +50,15 @@ renames PhysicalResources::all; -- imports all entities from PhysicalResources
 	control: in event port; 	
 	end Gyroscope;
 	
+	device TouchScreen -- device to get the user input via touch
+	features
+		touch_detected: out event port ;
+		update_display: in data port DataTypes::Image;
+		busAcc : requires bus access Hardware::DefaultBus.impl ;
+	flows
+		display_signal : flow sink update_display;
+end TouchScreen;
+	
 	device WifiAdapt --for data transfer via  wifi network
 	features
 	busAcc: requires bus access busaccess; -- access bus component

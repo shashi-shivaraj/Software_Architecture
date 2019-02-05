@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="24aefbb7-1e3f-479a-9a01-bbd2f6b59cd9" manual="true">
+    <bo>
+      <seg>package</seg>
+      <seg>bitecountersystem</seg>
+    </bo>
+    <contentFilters>
+      <filter>classifiers</filter>
+    </contentFilters>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>bitecountersystem</seg>
+    </context>
+  </config>
+</diagram:Diagram>

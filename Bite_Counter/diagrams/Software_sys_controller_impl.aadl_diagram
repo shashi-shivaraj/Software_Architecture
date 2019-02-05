@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="42a10d2b-5fe9-4f1c-a23b-7456f6505f13" manual="true">
+    <element uuid="b67919df-eb93-47d9-a2b7-97057a2e3651">
+      <element uuid="1dc1802c-f991-4f96-8181-01fa1ae3912f">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>bc</seg>
+      </bo>
+      <bendpoints>
+        <point x="427.0" y="256.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element uuid="85868077-c97f-475d-b092-0e32ec780d60">
+      <element uuid="47c2a655-590c-41b3-a1b5-383be44d2d25">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>disp_result</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="ba1ca87b-81c9-4da8-9779-4a0bbf4449fa">
+      <element uuid="24f51edd-fbbc-4c9a-92a2-6933f82d4999">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>gyro_ctrl</seg>
+      </bo>
+      <bendpoints>
+        <point x="902.0" y="256.0"/>
+        <point x="902.0" y="199.0"/>
+        <point x="902.0" y="137.0"/>
+      </bendpoints>
+      <contentFilters/>
+    </element>
+    <element uuid="9448e631-213e-45e3-996c-9056df0426b6">
+      <element uuid="3f3ed19e-1a5a-4e54-95b4-82ebeb1210db">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>gyrp_data</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="5b589beb-e8f0-4804-8781-922fba35b57d">
+      <element uuid="0699b38a-5875-4e1c-96e1-a2cf4b6c23cf">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>touch_notify</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="bb4ad7c9-490c-4dc7-82b3-6dc93a99eb8f">
+      <element uuid="954e17ab-13d3-4c1d-b10e-38ea3be4e52a">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>update_result</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="95b86474-92ae-48c1-a03d-0dee94ea1c2f">
+      <element uuid="ea8d28bd-2c00-4faf-8ee2-ecbee76262bd">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>user_input</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="43123dfe-b733-47aa-b679-3e0cf286e533" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>display_out</seg>
+      </bo>
+      <position y="258.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="7b824f23-fe0d-4a16-aa3d-fabff0c571ba" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>touch_event</seg>
+      </bo>
+      <position y="188.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="a570e8c5-c268-4df8-8d14-3299c15fb571">
+      <element uuid="1ff3645d-4d93-4d03-bd46-e99b3e6939a8" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>bitecount</seg>
+        </bo>
+        <position x="168.0" y="72.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="5809ee8f-6bab-4544-b08f-51f055c6db0f" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>gyro_data</seg>
+        </bo>
+        <position x="170.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>algo</seg>
+      </bo>
+      <position x="148.0" y="28.0"/>
+      <size width="249.0" height="112.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="3d4e8c92-6760-485e-ace6-99ab27c44692">
+      <element uuid="6dac65a1-6b89-45db-8c2c-f8d0073f6c45" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>disp_in</seg>
+        </bo>
+        <position x="185.0" y="117.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="0773fdf5-17d8-4fad-9ba9-29025d000950" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>displayout</seg>
+        </bo>
+        <position y="90.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="8315918a-93f8-4a41-bb83-42efb9b04dfb" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>notify_evt</seg>
+        </bo>
+        <position x="171.0" y="51.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="22b0073e-b859-43ed-8799-8e9244a3985c" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>touchin</seg>
+        </bo>
+        <position y="20.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>app</seg>
+      </bo>
+      <position x="108.0" y="173.0"/>
+      <size width="249.0" height="160.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="84f2a902-e260-41d0-910f-b76ed439e124">
+      <element uuid="04b2cf4f-fd79-430a-a404-cd9f47609113" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>sensor_data</seg>
+        </bo>
+        <position y="12.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="5d6a6d02-a1b2-44b3-8ee9-a5fed0c27bc3" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>signalin</seg>
+        </bo>
+        <position x="172.0" y="37.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>gyro</seg>
+      </bo>
+      <position x="550.0" y="28.0"/>
+      <size width="240.0" height="122.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="d98cc840-bc27-40d0-9d56-82a5c0f279ee">
+      <element uuid="68abb93a-6754-46a5-bb41-c088f58152f3" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bite_count</seg>
+        </bo>
+        <position y="26.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="dcbda5d1-7e00-4acd-bd43-b711cdaa3f5d" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>gyro_control</seg>
+        </bo>
+        <position x="286.0" y="26.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="fb4e87ed-2d68-4268-9503-50748b3a559d" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>touch_event</seg>
+        </bo>
+        <position y="72.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="8862c73e-a755-4b23-8420-fafa26f64cc4" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>update_display</seg>
+        </bo>
+        <position y="128.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>main_controller</seg>
+      </bo>
+      <position x="450.0" y="158.0"/>
+      <size width="383.0" height="190.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>sys_controller.impl</seg>
+    </bo>
+    <position x="30.0" y="40.0"/>
+    <size width="929.0" height="363.0"/>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>software::sys_controller.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

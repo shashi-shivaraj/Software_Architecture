@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="86e77c88-f79f-4a8a-80b1-2068a9fa7b11" manual="true">
+    <bo>
+      <seg>classifier</seg>
+      <seg>bitecounter_sys.with_devices</seg>
+    </bo>
+    <contentFilters>
+      <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
+      <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
+    </contentFilters>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>bitecountersystem::bitecounter_sys.with_devices</seg>
+    </context>
+  </config>
+</diagram:Diagram>

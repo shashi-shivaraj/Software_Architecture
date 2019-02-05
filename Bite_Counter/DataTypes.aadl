@@ -1,0 +1,20 @@
+package DataTypes
+public	
+	
+	data GyroData --data type named GyroData 
+		properties --Non-functional Properties of GyroData
+			Data_Size => 4 Bytes; --specify the size of data to store in memory
+	end GyroData; --end of data type GyroData definition
+	
+	data DisplayData -- data used in display system
+		properties
+			Data_Size => 40000 Bytes;	--100x100 RGBA Image
+	end DisplayData;
+	
+	data BiteData --data type named BiteData 
+		properties --Non-functional Properties of GyroData
+			Data_Size => 4 Bytes; --specify the size of data to store in memory
+	end BiteData; --end of data type BiteData definition
+	
+	
+end DataTypes;

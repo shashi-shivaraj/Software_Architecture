@@ -15,6 +15,7 @@ device TouchScreen -- device to get the user input via touch
 		busAcc : requires bus access Platform::busaccess ;
 	flows
 		display_signal : flow sink update_display;
+	
 end TouchScreen;
 
 --define the system

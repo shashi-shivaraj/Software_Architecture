@@ -2,7 +2,7 @@ package Platform --package Name-space for components
 public --all entities are visible
 	with SEI; -- import entity named SEI
 	with PhysicalResources; -- import entity named PhysicalResources
-renames PhysicalResources::all; -- imports all entities from PhysicalResources
+	renames PhysicalResources::all; -- imports all entities from PhysicalResources
 	
 	-- computer hardware platform
 	processor MainProcessor -- component category processor as execution resource
@@ -49,15 +49,6 @@ renames PhysicalResources::all; -- imports all entities from PhysicalResources
 	data_channel: out data port;
 	control: in event port; 	
 	end Gyroscope;
-	
-	device TouchScreen -- device to get the user input via touch
-	features
-		touch_detected: out event port ;
-		update_display: in data port DataTypes::Image;
-		busAcc : requires bus access Hardware::DefaultBus.impl ;
-	flows
-		display_signal : flow sink update_display;
-end TouchScreen;
 	
 	device WifiAdapt --for data transfer via  wifi network
 	features

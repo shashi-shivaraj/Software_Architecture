@@ -1,0 +1,35 @@
+system requirements BC_Sys_reqs for BiteCounterSystem::BiteCounter_sys.with_devices [
+	requirement SR1: "Power Supply" [
+        description this "the system will use a rechargeable lithium ion power supply provided to 
+						  power on all the required components of the system"
+        rationale "the method to power on the components of the Bite Counter system for its operations"
+        issues "possible power supply failure"
+    ]
+    requirement SR2: "Touch Screen Display" [
+        description this "the system will display the notifications and menu icon as soon it is switched on
+						  and provide the user interactive touch screen to perform further operations "
+        rationale "the method to configure/control the system for the user "
+        issues "touch screen failure to recognize inputs
+				possible display/notification failures"
+    ]
+    requirement SR3: "WiFi connection" [
+        description this "the user will connect a the system to  WiFi network by 
+						providing inputs via touch screen to send data from the system to a remote server"
+        rationale "The system communicates with a remote data server via WiFi"
+        issues "possible WiFi connection failures or data transfer failure"
+    ]
+   requirement SR4: "Session Alarm" [
+        description this "the user will be notified with sound and vibration alarms to indicate 
+							that the set threshold for total bites has been reached"
+        rationale "Notification to the user for the requested feature  "
+        issues "sound and vibrator module failures"
+    ]
+   requirement SR5: "Session Timeout" [
+        description this "the user will be notified of session timeout via display if
+							the total duration of the meal exceeds above 60 mins"
+        rationale "Notification to the user for session timeout"
+        issues "system can run-out of power and shutdown"
+    ]
+   ]
+   
+   

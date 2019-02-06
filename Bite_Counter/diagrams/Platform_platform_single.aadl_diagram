@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="85b95e48-875c-4163-b191-4875ea1af54c" manual="true">
+  <element uuid="50ce702b-2388-41c8-a9fb-49c36dcb7641" manual="true">
     <bo>
       <seg>classifier</seg>
-      <seg>main_controller</seg>
+      <seg>platform.single</seg>
     </bo>
     <contentFilters>
       <filter>features</filter>
+      <filter>internalFeatures</filter>
+      <filter>processorFeatures</filter>
+      <filter>connections</filter>
       <filter>flowSpecifications</filter>
+      <filter>subcomponents</filter>
     </contentFilters>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>
     <context>
       <seg>classifier</seg>
-      <seg>software::main_controller</seg>
+      <seg>platform::platform.single</seg>
     </context>
   </config>
 </diagram:Diagram>

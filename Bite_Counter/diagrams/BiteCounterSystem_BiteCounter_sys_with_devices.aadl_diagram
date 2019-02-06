@@ -1,10 +1,164 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="86e77c88-f79f-4a8a-80b1-2068a9fa7b11" manual="true">
+  <element uuid="eb67a93b-f2f9-42e6-b0c8-f468e1885596" manual="true">
+    <element uuid="81bc2d00-a796-4e4e-a953-7b762475f227">
+      <element uuid="53df2cec-6d56-43ba-b342-7e3bcfba66da">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>display_data_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="a7cd4c4a-89b7-4a4e-963c-edbc8a825ca6">
+      <element uuid="d1106058-dd2d-48bd-bd33-1fb9832535d3">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>touch_event_conn</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="6b783f83-4de2-4f49-8360-d1c802f26e22" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>display</seg>
+      </bo>
+      <position y="84.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="2b16f266-7fd5-4df2-84f3-3bd711dbbe1c" dockArea="left">
+      <bo>
+        <seg>feature</seg>
+        <seg>power</seg>
+      </bo>
+      <position y="208.0"/>
+      <contentFilters/>
+    </element>
+    <element uuid="114ba76b-0c12-47e9-8b94-a22e64826982">
+      <element uuid="3646d167-a59d-4cde-8a8b-145df83cc1fb" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>display_out</seg>
+        </bo>
+        <position x="228.0" y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="3c765952-8524-430b-ab2f-61fec76a028e" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>touch_event</seg>
+        </bo>
+        <position x="225.0" y="10.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>application</seg>
+      </bo>
+      <position x="68.0" y="160.0"/>
+      <size width="318.0" height="110.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="1110bff9-01e1-421b-83ff-45b4f171f9f1">
+      <element uuid="017cc70d-b071-4d6b-86ad-90c3a511068f" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>busacc</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="7f0410a7-51d2-495a-a626-410ca74fc91a" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>power</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>hw</seg>
+      </bo>
+      <position x="68.0" y="38.0"/>
+      <size width="208.0" height="110.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
+    <element uuid="08968625-c5c1-450b-a6f6-198d1aa38636">
+      <element uuid="e4762776-41aa-4623-9476-48952b9bfaf2" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>busacc</seg>
+        </bo>
+        <position y="110.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="76351373-176f-4d69-b34a-15013c7ca750" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>touch_detected</seg>
+        </bo>
+        <position y="10.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="463c6ad3-2167-4d5f-a5dc-39047cfa650e" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>update_display</seg>
+        </bo>
+        <position y="60.0"/>
+        <contentFilters/>
+      </element>
+      <element uuid="0449172a-7354-466a-91b7-0fd4a44fb2a9">
+        <bo>
+          <seg>flow_specification</seg>
+          <seg>display_signal</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>touch_screen</seg>
+      </bo>
+      <position x="406.0" y="160.0"/>
+      <size width="369.0" height="160.0"/>
+      <contentFilters>
+        <filter>features</filter>
+        <filter>internalFeatures</filter>
+        <filter>processorFeatures</filter>
+        <filter>connections</filter>
+        <filter>flowSpecifications</filter>
+      </contentFilters>
+    </element>
     <bo>
       <seg>classifier</seg>
       <seg>bitecounter_sys.with_devices</seg>
     </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="850.0" height="332.0"/>
     <contentFilters>
       <filter>features</filter>
       <filter>internalFeatures</filter>

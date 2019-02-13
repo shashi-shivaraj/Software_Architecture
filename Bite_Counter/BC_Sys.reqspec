@@ -1,4 +1,4 @@
-system requirements BC_Sys_reqs for BiteCounterSystem::BiteCounter_sys.with_devices [
+ system requirements BC_Sys_reqs for BiteCounterSystem::BiteCounter_sys.with_devices [
 	requirement SR1: "Power Supply" [
         description this "the system will use a rechargeable lithium ion power supply provided to 
 						  power on all the required components of the system"
@@ -41,17 +41,17 @@ system requirements BC_Sys_reqs for BiteCounterSystem::BiteCounter_sys.with_devi
 						and visualization"
 							"
         rationale "Data Sync to the Server"
-        issues "system can run-out of power and shutdown"
+        issues "server down"
     ]
     requirement SR8: "Device id" [
         description this "each device will be identified by an unique 9 digit alphanumeric id"
-        rationale "Notification to the user for session timeout"
-        issues "system can run-out of power and shutdown"
+        rationale "Device equipped with an id"
+        issues "Cannot recognize id"
     ]
      requirement SR9: "UserDefinedSettings" [
         description this "User will be having an option to set the system settings as per his preference"
-        rationale "Notification to the user for session timeout"
-        issues "system can run-out of power and shutdown"
+        rationale "Settings option"
+        issues "Set wrong threshold"
     ]
     #below are performance requirements of the system
     requirement SR10: "BiteNotificationTime" [
@@ -60,7 +60,7 @@ system requirements BC_Sys_reqs for BiteCounterSystem::BiteCounter_sys.with_devi
         issues "system can run-out of power and shutdown"
     ]
     requirement SR11: "DataSyncTime" [
-        description this "After session completion, this data should be successfully sent to the remote server within 30s"
+        description this "After session completion, this data should be successfully sent to the remote server within 2s"
         rationale "Notification to the user for session timeout"
         issues "system can run-out of power and shutdown"
     ]

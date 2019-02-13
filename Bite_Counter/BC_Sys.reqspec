@@ -103,10 +103,10 @@
     ]
     requirement SR19: "DataPolicy" [
         description this "Collected data from the system will not be shared with any 3rd party organization, ensuring data security"
-        rationale "Data stored in server"
-	issues "touch on display not working"
+        rationale "Data security"
+	issues "Data leakage"
     ]
-    requirement SR19: "CostEvaluation" [
+    requirement SR20: "CostEvaluation" [
         description this "Cost of the system manufacture must not exceed $100"
         rationale "Maximum Production cost = $100"
 	issues "exceeding production  cost"

@@ -80,7 +80,37 @@
         rationale "Equipped with touch screen display"
         issues "touch on display not working"
     ]
-    
+    requirement SR15: "Usecase" [
+        description this "Device is intended for human usage and system is operated by user via touch screen interface"
+        rationale "Human usage"
+        issues "Device won't work if not for humans"
+    ]
+    requirement SR16: "HardwareDesign" [
+        description this "Device is a wearable device wrapped around wrist of user with weight of system not exceeding 200gms"
+        rationale "MaximumWeight = 200gms"
+        issues "Weight exceeding limit"
+    ]
+    requirement SR17: "UserInterface" [
+        description this "Session information is stored and maintained at a remote server for further analysis and data visualization"
+        rationale "Data stored in server"
+        issues "server not responding"
+    ]
+    #policies and regulation
+    requirement SR18: "UsagePolicy" [
+        description this "Device System is designed and managed for education and research purpose only, it is not meant to provide medical advice or treatement"
+        rationale "Data stored in server"
+	issues "touch on display not working"
+    ]
+    requirement SR19: "DataPolicy" [
+        description this "Collected data from the system will not be shared with any 3rd party organization, ensuring data security"
+        rationale "Data stored in server"
+	issues "touch on display not working"
+    ]
+    requirement SR19: "CostEvaluation" [
+        description this "Cost of the system manufacture must not exceed $100"
+        rationale "Maximum Production cost = $100"
+	issues "exceeding production  cost"
+    ]
    ]
    
    

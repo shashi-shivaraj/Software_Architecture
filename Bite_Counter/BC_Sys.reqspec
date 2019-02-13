@@ -56,10 +56,20 @@
     #below are performance requirements of the system
     requirement SR10: "BiteNotificationTime" [
         description this "As soon as the user takes a bite, display should be increamented by bite count within 100 ms"
-        rationale "Notification to the user for session timeout"
-        issues "system can run-out of power and shutdown"
+        rationale "Notification to the user for ever bite"
+        issues "did not recognize bite"
     ]
     requirement SR11: "DataSyncTime" [
+        description this "After session completion, this data should be successfully sent to the remote server within 2s"
+        rationale "Sync within 2s"
+        issues "Data sync failure"
+    ]
+     requirement SR12: "SensorDataRate" [
+        description this "The Gyroscope data frequency should be 15Hz, i.e., 15 samples per sec"
+        rationale "Sensor Frequency"
+        issues "Sensor malfunction"
+    ]
+     requirement SR13: "DataSyncTime" [
         description this "After session completion, this data should be successfully sent to the remote server within 2s"
         rationale "Notification to the user for session timeout"
         issues "system can run-out of power and shutdown"

@@ -69,11 +69,18 @@
         rationale "Sensor Frequency"
         issues "Sensor malfunction"
     ]
-     requirement SR13: "DataSyncTime" [
-        description this "After session completion, this data should be successfully sent to the remote server within 2s"
-        rationale "Notification to the user for session timeout"
-        issues "system can run-out of power and shutdown"
+    #Interface Requirements
+     requirement SR13: "USBPort" [
+        description this "Device should be equipeed with USB 2.0 for power and data connection"
+        rationale "USB port 2.0 availability"
+        issues "Port connection failure"
     ]
+    requirement SR14: "UserInterface" [
+        description this "Device should be equipeed with multi point touch screen for the user to inteact with the system"
+        rationale "Equipped with touch screen display"
+        issues "touch on display not working"
+    ]
+    
    ]
    
    

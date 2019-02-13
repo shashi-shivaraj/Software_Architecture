@@ -18,15 +18,49 @@ system requirements BC_Sys_reqs for BiteCounterSystem::BiteCounter_sys.with_devi
         rationale "The system communicates with a remote data server via WiFi"
         issues "possible WiFi connection failures or data transfer failure"
     ]
-   requirement SR4: "Session Alarm" [
-        description this "the user will be notified with sound and vibration alarms to indicate 
-							that the set threshold for total bites has been reached"
-        rationale "Notification to the user for the requested feature  "
-        issues "sound and vibrator module failures"
+   requirement SR4: "Session SoundAlarm" [
+        description this "the user will be notified with sound alarms to indicate 
+						that the set threshold for total bites has been reached and sounds alarm for every extra bite after the set threshold       
+	rationale "Notification to the user for the requested feature "
+        issues "sound module failures"
     ]
-   requirement SR5: "Session Timeout" [
+    requirement SR5: "Session VibratrionAlarm" [
+        description this "the user will be notified with vibration alarms to indicate 
+						that the set threshold for total bites has been reached"
+        rationale "Notification to the user for the requested feature  "
+        issues "vibrator module failures"
+    ]
+   requirement SR6: "Session Timeout" [
         description this "the user will be notified of session timeout via display if
-							the total duration of the meal exceeds above 60 mins"
+						the total duration of the meal exceeds above 60 mins"
+        rationale "Notification to the user for session timeout"
+        issues "system can run-out of power and shutdown"
+    ]
+    requirement SR7: "DataSync" [
+        description this "After every Session, data will be sent to a remote server for data maintenance 
+						and visualization"
+							"
+        rationale "Data Sync to the Server"
+        issues "system can run-out of power and shutdown"
+    ]
+    requirement SR8: "Device id" [
+        description this "each device will be identified by an unique 9 digit alphanumeric id"
+        rationale "Notification to the user for session timeout"
+        issues "system can run-out of power and shutdown"
+    ]
+     requirement SR9: "UserDefinedSettings" [
+        description this "User will be having an option to set the system settings as per his preference"
+        rationale "Notification to the user for session timeout"
+        issues "system can run-out of power and shutdown"
+    ]
+    #below are performance requirements of the system
+    requirement SR10: "BiteNotificationTime" [
+        description this "As soon as the user takes a bite, display should be increamented by bite count within 100 ms"
+        rationale "Notification to the user for session timeout"
+        issues "system can run-out of power and shutdown"
+    ]
+    requirement SR11: "DataSyncTime" [
+        description this "After session completion, this data should be successfully sent to the remote server within 30s"
         rationale "Notification to the user for session timeout"
         issues "system can run-out of power and shutdown"
     ]

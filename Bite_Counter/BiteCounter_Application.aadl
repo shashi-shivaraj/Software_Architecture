@@ -1,0 +1,18 @@
+--application architecture for the system that utilizes the reference architecture BiteCounterSystem
+package BiteCounter_Application
+public
+	with BiteCounterSystem; -- import entity named BiteCounterSystem
+	with Software;-- import entity named Software
+
+	--implementation of the system
+	system BiteCounter_system extends BiteCounterSystem::BiteCounter_sys
+	end BiteCounter_system;
+
+	system implementation BiteCounter_system.AppImpl extends BiteCounterSystem::BiteCounter_sys.with_devices
+		subcomponents
+			UserApp: subprogram Software::Display_Application; --application program  for user interface
+			DataSyncWifi: process Software::SyncDataviaWiFi; --application process to transmit data via Wifi 
+			DataSyncBT: process Software::SyncDataviaBT; --application process to transmit data via BT
+	end BiteCounter_system.AppImpl;
+
+end BiteCounter_Application;

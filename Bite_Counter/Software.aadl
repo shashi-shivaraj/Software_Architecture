@@ -67,7 +67,17 @@ public --all entities are visible
 		
 		end sys_controller.impl; -- end of process Main_Controller.impl implementation 
 
+process SyncDataviaWiFi
+-- contains the utility software which performs the data transfer operation via Wifi network.
+end SyncDataviaWiFi;
 
+process SyncDataviaBT
+-- contains the utility software which performs the data transfer operation via BT connection.
+end SyncDataviaBT;
+
+subprogram Display_Application
+--contains the application software to be displayed on the touch screen
+end Display_Application;
 
 thread Main_Controller --main thread of the system
 	features

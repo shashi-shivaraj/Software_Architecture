@@ -1,0 +1,120 @@
+ system requirements BC_Sys_reqs for BiteCounterSystem::BiteCounter_sys.with_devices [
+	requirement SR1: "Power Supply" [
+        description this "the system will use a rechargeable lithium ion power supply provided to 
+						  power on all the required components of the system"
+        rationale "the method to power on the components of the Bite Counter system for its operations"
+        issues "possible power supply failure"
+    ]
+    requirement SR2: "Touch Screen Display" [
+        description this "the system will display the notifications and menu icon as soon it is switched on
+						  and provide the user interactive touch screen to perform further operations "
+        rationale "the method to configure/control the system for the user "
+        issues "touch screen failure to recognize inputs
+				possible display/notification failures"
+    ]
+    requirement SR3: "WiFi connection" [
+        description this "the user will connect a the system to  WiFi network by 
+						providing inputs via touch screen to send data from the system to a remote server"
+        rationale "The system communicates with a remote data server via WiFi"
+        issues "possible WiFi connection failures or data transfer failure"
+    ]
+   requirement SR4: "Session SoundAlarm" [
+        description this "the user will be notified with sound alarms to indicate 
+						that the set threshold for total bites has been reached and sounds alarm for every extra bite after the set threshold"       
+	rationale "Notification to the user of the requested features "
+        issues "sound module failures"
+    ]
+    requirement SR5: "Session VibratrionAlarm" [
+        description this "the user will be notified with vibration alarms to indicate 
+						that the set threshold for total bites has been reached"
+        rationale "Notification to the user for the requested features"
+        issues "vibrator module failures"
+    ]
+   requirement SR6: "Session Timeout" [
+        description this "the user will be notified of session timeout via display if
+						the total duration of the meal exceeds above 60 mins"
+        rationale "Notification to the user for session timeout"
+        issues "system can run-out of power and shutdown"
+    ]
+    requirement SR7: "DataSync" [
+        description this "After every Session, data will be sent to a remote server for data maintenance 
+						and visualization"
+        rationale "Data Sync to the Server"
+        issues "server down"
+    ]
+    requirement SR8: "Device id" [
+        description this "each device will be identified by an unique 9 digit alphanumeric id"
+        rationale "Device equipped with an id"
+        issues "Cannot recognize id"
+    ]
+     requirement SR9: "UserDefinedSettings" [
+        description this "User will be having an option to set the system settings as per his preference"
+        rationale "Settings option"
+        issues "Set wrong threshold"
+    ]
+    
+    //below are performance requirements of the system
+    requirement SR10: "BiteNotificationTime" [
+        description this "As soon as the user takes a bite, display should be increamented by bite count within 100 ms"
+        rationale "Notification to the user for ever bite"
+        issues "did not recognize bite"
+    ]
+    requirement SR11: "DataSyncTime" [
+        description this "After session completion, this data should be successfully sent to the remote server within 2s"
+        rationale "Sync within 2s"
+        issues "Data sync failure"
+    ]
+     requirement SR12: "SensorDataRate" [
+        description this "The Gyroscope data frequency should be 15Hz, i.e., 15 samples per sec"
+        rationale "Sensor Frequency"
+        issues "Sensor malfunction"
+    ]
+    
+    //Interface Requirements
+     requirement SR13: "USBPort" [
+        description this "Device should be equipeed with USB 2.0 for power and data connection"
+        rationale "USB port 2.0 availability"
+        issues "Port connection failure"
+    ]
+    requirement SR14: "UserInterface" [
+        description this "Device should be equipeed with multi point touch screen for the user to inteact with the system"
+        rationale "Equipped with touch screen display"
+        issues "touch on display not working"
+    ]
+    requirement SR15: "Use-case" [
+        description this "Device is intended for human usage and system is operated by user via touch screen interface"
+        rationale "Human usage"
+        issues "Device won't work if not for humans"
+    ]
+    requirement SR16: "HardwareDesign" [
+        description this "Device is a wearable device wrapped around wrist of user with weight of system not exceeding 200gms"
+        rationale "MaximumWeight = 200gms"
+        issues "Weight exceeding limit"
+    ]
+    requirement SR17: "UserInterface" [
+        description this "Session information is stored and maintained at a remote server for further analysis and data visualization"
+        rationale "Data stored in server"
+        issues "server not responding"
+    ]
+    
+    //policies and regulation
+    requirement SR18: "UsagePolicy" [
+        description this "Device System is designed and managed for education and research purpose only, it is not meant to provide medical advice or treatement"
+        rationale "Data stored in server"
+	issues "touch on display not working"
+    ]
+    requirement SR19: "DataPolicy" [
+        description this "Collected data from the system will not be shared with any 3rd party organization, ensuring data security"
+        rationale "Data security"
+	issues "Data leakage"
+    ]
+    requirement SR20: "CostEvaluation" [
+        description this "Cost of the system manufacture must not exceed $100"
+        rationale "Maximum Production cost = $100"
+	issues "exceeding production  cost"
+    ]
+
+   ]
+   
+   
+	

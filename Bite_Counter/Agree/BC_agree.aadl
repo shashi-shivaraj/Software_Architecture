@@ -1,0 +1,63 @@
+package BC_agree
+public
+
+with Platform;
+with Software;
+with BiteCounterSystem;
+with SEI; -- import entity named SEI
+with PhysicalResources; -- import entity named PhysicalResources
+	
+system BiteCounter_sys
+	features
+		power: in feature;
+		display :out feature;
+		annex agree {**
+    guarantee "constant power supply to the  system ": power = 2.5 w;
+    assume "display shows RGBA image": display = DataTypes::DisplayData;
+**};
+end BiteCounter_sys;
+
+system implementation BiteCounter_sys.with_devices
+	subcomponents --subcomponents used to build the system
+		hw: system Platform.single; --platform system component as hw
+		Application:process Software::sys_controller.impl; --GUI application
+		touch_Screen : device BiteCounterSystem::TouchScreen; --Monitor for HMI
+	
+	connections --connect the required subcomponents as per the system design	    
+	    touch_event_conn: port touch_Screen.touch_detected->Application.touch_event;
+	    display_data_conn: port Application.display_out->touch_Screen.update_display;
+	end BiteCounter_sys.with_devices;
+	
+system platform --platform encapsulation block
+		features --list of ports, access to other elements.
+			busAcc: provides bus access Platform::busaccess; -- access bus component
+			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
+	annex agree {**
+    guarantee "constant power supply to the platform system ": power = 0.8  w;
+    assume "connects all the subcomponents of the platform system";
+**};	
+	end platform; --end of platform
+
+	system implementation platform.single --system platform.single implementation declaration
+		subcomponents -- internal subcomponents 
+			pc: processor Platform::MainProcessor; -- processor component
+			M: memory Platform::main_memory; -- memory component
+		    bus_acc: bus Platform::busaccess; -- bus component
+		    gyro : device Platform::Gyroscope; --gyro subcomponent
+		    audio : device Platform::Speaker;
+		    vibrate : device Platform::Vibrator;
+		    wifi : device Platform::WifiAdapt;
+		connections -- link subcomponents
+			Extbusaccess: bus access bus_acc -> busAcc; --connect the system to bus component
+			bustoPC: bus access bus_acc -> pc.busAcc; --connect the system to can bus of processor component
+			PCPower: feature power -> pc.power; -- connect to power the processor
+			BusPower: feature power -> bus_acc.power; -- connect to power the bus 
+			MemoryPower: feature power -> M.power;-- connect to power the memory
+			GyroPower: feature power -> gyro.power;
+			AudioPower: feature power -> audio.power;
+			WifiPower: feature power -> wifi.power;
+			VibPower: feature power -> vibrate.power;
+	end platform.single; -- end of system implementation platform.single
+	
+end BC_agree;
+

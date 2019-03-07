@@ -86,30 +86,5 @@ thread Main_Controller --main thread of the system
 		gyro_control: out event port; -- input data port
 		bite_count: in data port BiteData; --output data port
 end Main_Controller;
-
-
-
---	process APP -- component process APP address space
-	--	features --list of ports, access to other elements.
-		--	samplingin: in data port SensorData; -- input data port
-			--controlout: out data port actuatecmd; --output data port
---		flows -- flow implementation
-	--		processingflow: flow path samplingin -> controlout; -- app data flow
-		--properties --Non-functional Properties of APP
-	--		SEI::MIPSBudget => 0.7 mips;  -- computing speed of the process
-	--end APP; -- end of process definition
-
---	process implementation APP.impl --process APP.impl implementation declaration
-	--	subcomponents -- internal subcomponents 
-		--	filter: thread filterApp; --thread component for filter
-			--control: thread controlApp; --thread component for control
-		--connections -- link subcomponents
-		--	filtertocontrol: port filter.sensorfiltered -> control.sensorfiltered; --link out port of filterApp thread to in port of controlApp thread
-		--	outgoingCmd: port control.actuate -> controlout;--link out port of process with out port of controlApp thread
-		--	incomingSignal: port samplingin -> filter.sensorraw; --link in port of process with in port of filterApp
-		--flows -- flow implementation 
-		--	processingflow: flow path samplingin -> incomingSignal -> filter -> filtertocontrol -> control -> outgoingCmd ->
-		--					controlout; -- app data flow
-	--end APP.impl; -- end of process APP.impl implementation 
 	
 end Software; --end of package Software

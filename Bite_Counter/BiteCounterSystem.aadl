@@ -54,6 +54,11 @@ system implementation BiteCounter_sys.with_devices
 	connections --connect the required subcomponents as per the system design	    
 	    touch_event_conn: port touch_Screen.touch_detected->Application.touch_event;
 	    display_data_conn: port Application.display_out->touch_Screen.update_display;
+	    	
+	 annex resolute {**
+	prove check_process(this.Application)
+**};
+ 
 	end BiteCounter_sys.with_devices;
 		
 end BiteCounterSystem;

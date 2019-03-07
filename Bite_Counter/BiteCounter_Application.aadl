@@ -13,6 +13,13 @@ public
 			UserApp: subprogram Software::Display_Application; --application program  for user interface
 			DataSyncWifi: process Software::SyncDataviaWiFi; --application process to transmit data via Wifi 
 			DataSyncBT: process Software::SyncDataviaBT; --application process to transmit data via BT
+	
+	 annex resolute {**
+	prove check_process(this.DataSyncWifi)
+	prove check_process(this.DataSyncBT)
+**};
+
 	end BiteCounter_system.AppImpl;
+	
 
 end BiteCounter_Application;

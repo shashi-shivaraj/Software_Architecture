@@ -1,0 +1,15 @@
+package resolute_rules
+public
+	annex resolute {**
+			
+	check_process(p : process) <=
+  		** " Check threads in process " p **
+		forall(t : thread). contained(t, p) => check_thread (t)
+
+	check_thread(t : thread) <=
+  	** "The thread " t " has stack size equal or greater than 10 Kbyte"  **
+  		(has_property (t, Stack_Size)) and 
+  		(property (t, Stack_Size) >= 10 Kbyte)
+  		
+**};
+end resolute_rules;

@@ -3,9 +3,56 @@ package BiteCounter_Application
 public
 	with BiteCounterSystem; -- import entity named BiteCounterSystem
 	with Software;-- import entity named Software
+	with EMV2;
+	with ErrorStates;
 
 	--implementation of the system
 	system BiteCounter_system extends BiteCounterSystem::BiteCounter_sys
+		features
+			session_control: in event port;
+		annex behavior_specification {**
+			states
+					Idle: initial state; 
+	  				Active     : state;
+	  				Failed: state;
+			transitions
+					t1 : Idle -[session_control? = True]-> Active;
+					t2 : Active -[session_control? = False]-> Idle;
+					t3 : Idle -[session_control? = False]-> Failed;
+					t4 : Active -[session_control? = True]-> Failed;
+	**};
+	
+	annex EMV2 {**
+			use types ErrorLibrary;
+			use behavior ErrorStates::simple;
+			
+			
+			component error behavior
+			events
+					Internal_Failure : error event;
+			transitions
+					t0 : Idle -[Internal_Failure]-> Failed;
+			end component;
+			properties
+					EMV2::hazards => 
+					([	crossreference => "N/A";
+						failure => "Bite Counter is not operating";
+						phases => ("");
+						description => "";
+						comment => "";
+					])
+			applies to Failed;
+		
+		EMV2::hazards => 
+		([	crossreference => "N/A";
+			failure => "Bite Counter is fully operational";
+			phases => ("");
+			description => "";
+			comment => "";
+		])
+		applies to Idle;
+	**};
+
 	end BiteCounter_system;
 
 	system implementation BiteCounter_system.AppImpl extends BiteCounterSystem::BiteCounter_sys.with_devices

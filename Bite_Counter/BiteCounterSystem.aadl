@@ -12,7 +12,7 @@ device TouchScreen -- device to get the user input via touch
 	features
 		touch_detected: out event port ;
 		update_display: in data port DataTypes::DisplayData;
-		busAcc : requires bus access Platform::busaccess ;
+		power: in feature;
 	flows
 		display_signal : flow sink update_display;
 	
@@ -22,25 +22,9 @@ end TouchScreen;
 system BiteCounter_sys
 	features
 		power: in feature;
-		display :out feature;
+		busAcc: provides bus access busaccess; -- access bus component
 	properties
 		SEI::PowerBudget => 2.5 w applies to power;
-	--system error handling	
-	annex emv2 {**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-				use types ErrorLibrary;
-				use behavior ErrorLibrary::FailStop;
-				error propagations
-					display: out propagation {ServiceOmission};
-					flows
-						es1: error source display;
-				end propagations;
-				properties
-				emv2::hazards => 
-					([failure => "No Display";
-						description => "No info to display";
-					])
-					applies to display;
-					**};
 				
 end BiteCounter_sys;
 
@@ -54,6 +38,9 @@ system implementation BiteCounter_sys.with_devices
 	connections --connect the required subcomponents as per the system design	    
 	    touch_event_conn: port touch_Screen.touch_detected->Application.touch_event;
 	    display_data_conn: port Application.display_out->touch_Screen.update_display;
+	    sensoraccess: bus access hw.busAcc -> busAcc;
+	    power_access:feature power->hw.power;
+	    power_touchscreen:feature power->touch_Screen.power;
 	    	
 	 annex resolute {**
 	prove check_process(this.Application)

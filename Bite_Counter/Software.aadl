@@ -38,6 +38,20 @@ public --all entities are visible
 			--   Compute_Execution_Time => 2 ms .. 6 ms; intentionally left out
 	end BC_Algo_Thread;  --end of thread controlApp definition
 
+--	system Middleware
+--		features
+			
+--		flows
+			
+--		properties
+--			SEI::MIPSBudget => 2.0 mips;
+--	end Middleware;
+	
+	--system implementation Middleware.impl
+		
+	--end Middleware.impl;
+	
+	
 	-- Now, declare process that model partition address space
 	process sys_controller -- component process IOP address space
 		features --list of ports, access to other elements.

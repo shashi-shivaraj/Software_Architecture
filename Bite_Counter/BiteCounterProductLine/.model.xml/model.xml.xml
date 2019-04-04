@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<layout chosenLayoutAlgorithm="0">
+		<struct>
+			<feature X="515" Y="90" name="First_gen"/>
+			<feature X="478" Y="140" name="USB"/>
+			<feature X="571" Y="140" name="NewFeature1"/>
+			<feature X="472" Y="40" name="BiteCounterProductLine"/>
+			<feature X="523" Y="140" name="Time"/>
+			<feature X="433" Y="140" name="Algo"/>
+		</struct>
+		<constraints/>
+	</layout>

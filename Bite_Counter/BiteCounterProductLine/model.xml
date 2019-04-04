@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<or abstract="true" mandatory="true" name="BiteCounterProductLine">
+				<description>
+					
+				</description>
+				<and mandatory="true" name="Third_Gen">
+					<description>
+						
+					</description>
+					<and mandatory="true" name="Second_Gen">
+						<description>
+							
+						</description>
+						<and mandatory="true" name="First_gen">
+							<description>
+								
+							</description>
+							<feature mandatory="true" name="Algo">
+								<description>
+									
+								</description>
+							</feature>
+							<feature mandatory="true" name="USB">
+								<description>
+									
+								</description>
+							</feature>
+							<feature mandatory="true" name="Time">
+								<description>
+									
+								</description>
+							</feature>
+						</and>
+						<feature mandatory="true" name="Bluethooth">
+							<description>
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="Sound_Alarm">
+							<description>
+								
+							</description>
+						</feature>
+					</and>
+					<feature mandatory="true" name="Wifi">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Pedometer">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+			</or>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>

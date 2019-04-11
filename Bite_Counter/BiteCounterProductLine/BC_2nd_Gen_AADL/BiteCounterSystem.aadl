@@ -1,0 +1,51 @@
+package BiteCounterSystem
+public
+
+--import the external packages
+with Platform;	-- import entity named Platform
+	renames Platform::all; -- imports all entities from Platform
+with DataTypes;
+with Software;
+with SEI;
+
+device TouchScreen -- device to get the user input via touch
+	features
+		touch_detected: out event port ;
+		update_display: in data port DataTypes::DisplayData;
+		power: in feature;
+	flows
+		display_signal : flow sink update_display;
+	
+end TouchScreen;
+
+--define the system
+system BiteCounter_sys
+	features
+		power: in feature;
+		busAcc: provides bus access busaccess; -- access bus component
+	properties
+		SEI::PowerBudget => 2.5 w applies to power;
+				
+end BiteCounter_sys;
+
+--implementation of the system design
+system implementation BiteCounter_sys.with_devices
+	subcomponents --subcomponents used to build the system
+		hw: system Platform.single; --platform system component as hw
+		Application:process Software::sys_controller.impl; --GUI application
+		touch_Screen : device TouchScreen; --Monitor for HMI
+	
+	connections --connect the required subcomponents as per the system design	    
+	    touch_event_conn: port touch_Screen.touch_detected->Application.touch_event;
+	    display_data_conn: port Application.display_out->touch_Screen.update_display;
+	    sensoraccess: bus access hw.busAcc -> busAcc;
+	    power_access:feature power->hw.power;
+	    power_touchscreen:feature power->touch_Screen.power;
+	    	
+	 annex resolute {**
+	prove check_process(this.Application)
+**};
+ 
+	end BiteCounter_sys.with_devices;
+		
+end BiteCounterSystem;

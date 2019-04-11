@@ -1,0 +1,134 @@
+package Software --package Name-space for components
+public --all entities are visible
+	with DataTypes; -- import entity named DataDictionary
+	renames DataTypes::all; -- imports all entities from DataDictionary
+	with SEI; -- import entity named SEI
+	
+	-- Threads for the first process
+	thread gyro_sensor_thread --component thread for sensor execution flow
+		features --list of ports, access to other elements.
+			sensor_data: out data port GyroData; --output data port
+			signalin: in event port; -- input data port
+		properties --Non-functional Properties of sensor_sense_thread
+			Stack_Size => 10 Kbyte; --stack memory size = 10 Kilobytes  
+			Period => 10 ms; --thread execution period = 20 millisecond
+			Compute_Execution_Time => 10 ms .. 12 ms; --thread execution time varies from 10ms to 12ms
+	end gyro_sensor_thread; --end of thread sensor_sense_thread definition
+	
+	-- Threads for the first process
+	thread pedometer_sensor_thread --component thread for sensor execution flow
+		features --list of ports, access to other elements.
+			sensor_data: out data port PedometerData; --output data port
+			signalin: in event port; -- input data port
+		properties --Non-functional Properties of sensor_sense_thread
+			Stack_Size => 10 Kbyte; --stack memory size = 10 Kilobytes  
+			Period => 10 ms; --thread execution period = 20 millisecond
+			Compute_Execution_Time => 10 ms .. 12 ms; --thread execution time varies from 10ms to 12ms
+	end pedometer_sensor_thread; --end of thread sensor_sense_thread definition
+	
+
+	thread application_thread --component thread for actuator execution flow
+		features --list of ports , access to other elements.
+			touchin: in event port; -- input data port
+			notify_evt : out event port;
+			displayout: out data port DisplayData; --output data port
+			disp_in : in data port DisplayData;
+		properties --Non-functional Properties of actuator_output_thread
+			Stack_Size => 10 Kbyte; --stack memory size = 10 Kilobytes  
+			--Period => 20 ms; --thread execution period = 20 millisecond
+			--Compute_Execution_Time => 8 ms .. 10 ms; --thread execution time varies from 8ms to 10ms
+	end application_thread; --end of thread actuator_output_thread definition
+
+	thread BC_Algo_Thread --component thread for Bite Detection
+		features --list of ports, access to other elements.
+			gyro_data: in data port GyroData; -- input data port
+			BiteCount: out data port BiteData; --output data port
+		properties  --Non-functional Properties of filterApp
+			Stack_Size => 25 Kbyte; --stack memory size = 25 Kilobytes  
+			--Data_size => 50 KByte; -- -data memory size = 50 Kilobytes for control state
+			--Period => 10 ms; --thread execution period = 20 millisecond
+			--   Compute_Execution_Time => 2 ms .. 6 ms; intentionally left out
+	end BC_Algo_Thread;  --end of thread controlApp definition
+	
+	thread Pedo_Algo_Thread --component thread for Bite Detection
+		features --list of ports, access to other elements.
+			pedo_data: in data port PedometerData; -- input data port
+			StepCount: out data port StepData; --output data port
+		properties  --Non-functional Properties of filterApp
+			Stack_Size => 25 Kbyte; --stack memory size = 25 Kilobytes  
+			--Data_size => 50 KByte; -- -data memory size = 50 Kilobytes for control state
+			--Period => 10 ms; --thread execution period = 20 millisecond
+			--   Compute_Execution_Time => 2 ms .. 6 ms; intentionally left out
+	end Pedo_Algo_Thread;  --end of thread controlApp definition
+
+--	system Middleware
+--		features
+			
+--		flows
+			
+--		properties
+--			SEI::MIPSBudget => 2.0 mips;
+--	end Middleware;
+	
+	--system implementation Middleware.impl
+		
+	--end Middleware.impl;
+	
+	
+	-- Now, declare process that model partition address space
+	process sys_controller -- component process IOP address space
+		features --list of ports, access to other elements.
+			touch_event: in event port;
+			display_out: out data port DisplayData;--output data port
+		--flows -- flow implementation
+			--eventflow: flow path in_control_event -> out_control_event; --sensor event flow
+			--resultflow: flow path bite_count -> display_out; --BC result flow
+		properties --Non-functional Properties of IOP
+			SEI::MIPSBudget => 0.8 mips; -- computing speed of the process
+	end sys_controller; -- end of process definition 
+
+	process implementation sys_controller.impl --process Main_Controller.impl implementation declaration
+		subcomponents -- internal subcomponents 
+			main_controller: thread Main_Controller;
+			gyro: thread gyro_sensor_thread; --thread component for gyro
+			pedo:thread pedometer_sensor_thread; --thread component for pedometer
+			app: thread application_thread; --thread component  for app
+			algo: thread BC_Algo_Thread; --thread componet for Algo
+			pedo_algo: thread Pedo_Algo_Thread;
+		connections -- link subcomponents
+		touch_notify : port app.notify_evt->main_controller.touch_event;
+		update_result : port main_controller.update_display->app.disp_in;
+		user_input : port touch_event-> app.touchin;
+		disp_result : port app.displayout->display_out;
+		gyro_ctrl: port  main_controller.gyro_control ->  gyro.signalin; 
+		gyrp_data: port  gyro.sensor_data->algo.gyro_data;
+		pedo_ctrl: port  main_controller.pedo_control -> pedo.signalin;
+		pedo_data: port  pedo.sensor_data->pedo_algo.pedo_data;
+		bc: port algo.BiteCount -> main_controller.bite_count;
+		sc: port pedo_algo.StepCount -> main_controller.step_count;
+		
+		end sys_controller.impl; -- end of process Main_Controller.impl implementation 
+
+process SyncDataviaWiFi
+-- contains the utility software which performs the data transfer operation via Wifi network.
+end SyncDataviaWiFi;
+
+process SyncDataviaBT
+-- contains the utility software which performs the data transfer operation via BT connection.
+end SyncDataviaBT;
+
+subprogram Display_Application
+--contains the application software to be displayed on the touch screen
+end Display_Application;
+
+thread Main_Controller --main thread of the system
+	features
+		touch_event : in event port;
+		update_display : out data port DisplayData;
+		gyro_control: out event port; -- input data port
+		pedo_control: out event port;
+		step_count :in data port StepData;
+		bite_count: in data port BiteData; --output data port
+end Main_Controller;
+	
+end Software; --end of package Software

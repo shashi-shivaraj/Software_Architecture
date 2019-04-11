@@ -1,0 +1,12 @@
+package ErrorStates
+public
+	annex EMV2 {**
+	error behavior Simple 
+	states
+	 Idle:  state; 
+	  Active     : state;
+	  Failed: state;
+	end behavior;
+	
+**};
+end ErrorStates;

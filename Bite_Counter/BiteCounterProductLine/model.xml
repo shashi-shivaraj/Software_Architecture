@@ -10,7 +10,7 @@
 					<description>
 						
 					</description>
-					<and mandatory="true" name="Second_Gen">
+					<and name="Second_Gen">
 						<description>
 							
 						</description>
@@ -34,23 +34,23 @@
 								</description>
 							</feature>
 						</and>
-						<feature mandatory="true" name="Bluethooth">
+						<feature mandatory="true" name="WiFi">
 							<description>
 								
 							</description>
 						</feature>
-						<feature mandatory="true" name="Sound_Alarm">
+						<feature mandatory="true" name="Sound_Alarm + Vibration">
 							<description>
 								
 							</description>
 						</feature>
 					</and>
-					<feature mandatory="true" name="Wifi">
+					<feature mandatory="true" name="Pedometer">
 						<description>
 							
 						</description>
 					</feature>
-					<feature mandatory="true" name="Pedometer">
+					<feature name="Bluetooth">
 						<description>
 							
 						</description>

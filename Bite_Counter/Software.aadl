@@ -47,9 +47,9 @@ public --all entities are visible
 --			SEI::MIPSBudget => 2.0 mips;
 --	end Middleware;
 	
-	--system implementation Middleware.impl
+--system implementation Middleware.impl
 		
-	--end Middleware.impl;
+--end Middleware.impl;
 	
 	
 	-- Now, declare process that model partition address space

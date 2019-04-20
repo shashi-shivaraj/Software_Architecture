@@ -10,35 +10,35 @@ public --all entities are visible
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 			busAcc: requires bus access busaccess; -- access bus component
 		properties --Non-functional Properties of powerpc
-			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the processor 
+			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the processor 
 			SEI::MIPSCapacity => 3.6 mips; -- computing performance of the processor
-			--SEI::Grossweight => 0.7 kg; -- weight of the processor
+			SEI::Grossweight => 0.01 kg; -- weight of the processor
 	end MainProcessor; --end of processor powerpc definition
 
 	bus busaccess -- component category bus as physical interconnect
 		features --list of ports, access to other elements.
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
-		--properties --Non-functional Properties of CANbus
-			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the bus 
-			--SEI::Grossweight => 0.2 kg; -- weight of the bus
+		properties --Non-functional Properties of CANbus
+			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the bus 
+			SEI::Grossweight => 0.01 kg; -- weight of the bus
 	end busaccess; --end of bus CANbus definition
 
 	memory main_memory -- component category memory as RAM
 		features --list of ports, access to other elements.
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component
 			busAcc: requires bus access busaccess; -- access bus component 
-		--properties --Non-functional Properties of main_memory  
-			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the main_memory
-			--SEI::Grossweight => 0.1 kg; -- weight of the main_memory
+		properties --Non-functional Properties of main_memory  
+			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the main_memory
+			SEI::Grossweight => 0.001 kg; -- weight of the main_memory
 	end main_memory; --end of memory main_memory definition
 	
 	memory flash_memory -- component category memory as storage
 		features --list of ports, access to other elements.
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 			busAcc: requires bus access busaccess; -- access bus component
-		--properties --Non-functional Properties of main_memory  
-			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the main_memory
-			--SEI::Grossweight => 0.1 kg; -- weight of the main_memory
+		properties --Non-functional Properties of main_memory  
+			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the main_memory
+			SEI::Grossweight => 0.001 kg; -- weight of the main_memory
 	end flash_memory; --end of memory main_memory definition
 	
 	
@@ -78,9 +78,9 @@ public --all entities are visible
 			busAcc: provides bus access busaccess; -- access bus component
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 		properties --Non-functional Properties of platform 
-			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the platform
+			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the platform
 			SEI::MIPSCapacity => 3.6 mips; -- computing performance of the platform
-			--SEI::Grossweight => 1.0 kg; -- weight of the platform
+			SEI::Grossweight => 0.1 kg; -- weight of the platform
 	end platform; --end of platform
 
 	system implementation platform.single --system platform.single implementation declaration

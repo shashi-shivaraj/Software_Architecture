@@ -1,4 +1,4 @@
-package ErrorStates
+package ErrorStates_2nd_Gen
 public
 	annex EMV2 {**
 	error behavior Simple 
@@ -9,4 +9,4 @@ public
 	end behavior;
 	
 **};
-end ErrorStates;
+end ErrorStates_2nd_Gen;

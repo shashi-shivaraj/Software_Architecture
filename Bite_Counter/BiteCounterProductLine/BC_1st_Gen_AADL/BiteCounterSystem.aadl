@@ -1,17 +1,17 @@
-package BiteCounterSystem
+package BiteCounterSystem_1st_Gen
 public
 
 --import the external packages
-with Platform;	-- import entity named Platform
-	renames Platform::all; -- imports all entities from Platform
-with DataTypes;
-with Software;
+with Platform_1st_Gen;	-- import entity named Platform_1st_Gen
+	renames Platform_1st_Gen::all; -- imports all entities from Platform_1st_Gen
+with DataTypes_1st_Gen;
+with Software_1st_Gen;
 with SEI;
 
 device TouchScreen -- device to get the user input via touch
 	features
 		touch_detected: out event port ;
-		update_display: in data port DataTypes::DisplayData;
+		update_display: in data port DataTypes_1st_Gen::DisplayData;
 		power: in feature;
 	flows
 		display_signal : flow sink update_display;
@@ -31,8 +31,8 @@ end BiteCounter_sys;
 --implementation of the system design
 system implementation BiteCounter_sys.with_devices
 	subcomponents --subcomponents used to build the system
-		hw: system Platform.single; --platform system component as hw
-		Application:process Software::sys_controller.impl; --GUI application
+		hw: system Platform_1st_Gen.single; --Platform_1st_Gen system component as hw
+		Application:process Software_1st_Gen::sys_controller.impl; --GUI application
 		touch_Screen : device TouchScreen; --Monitor for HMI
 	
 	connections --connect the required subcomponents as per the system design	    
@@ -48,4 +48,4 @@ system implementation BiteCounter_sys.with_devices
  
 	end BiteCounter_sys.with_devices;
 		
-end BiteCounterSystem;
+end BiteCounterSystem_1st_Gen;

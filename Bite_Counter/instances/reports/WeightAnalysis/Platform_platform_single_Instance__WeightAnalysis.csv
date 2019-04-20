@@ -1,0 +1,7 @@
+Weight totals Report
+
+bus_acc: [L] Sum of weights / gross weight is 0.010 kg (no limit specified)
+M: [L] Sum of weights / gross weight is 0.001 kg (no limit specified)
+pc: [L] Sum of weights / gross weight is 0.010 kg (no limit specified)
+Warning! platform_single_Instance: [G] Sum of weights (0.021 kg) less than gross weight of 0.100 kg (using gross weight)
+platform_single_Instance: [L] Sum of weights / gross weight is 0.100 kg (no limit specified)

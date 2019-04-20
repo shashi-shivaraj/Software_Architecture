@@ -1,7 +1,7 @@
-package Software --package Name-space for components
+package Software_3rd_Gen --package Name-space for components
 public --all entities are visible
-	with DataTypes; -- import entity named DataDictionary
-	renames DataTypes::all; -- imports all entities from DataDictionary
+	with DataTypes_3rd_Gen; -- import entity named DataDictionary
+	renames DataTypes_3rd_Gen::all; -- imports all entities from DataDictionary
 	with SEI; -- import entity named SEI
 	
 	-- Threads for the first process
@@ -110,15 +110,15 @@ public --all entities are visible
 		end sys_controller.impl; -- end of process Main_Controller.impl implementation 
 
 process SyncDataviaWiFi
--- contains the utility software which performs the data transfer operation via Wifi network.
+-- contains the utility Software_3rd_Gen which performs the data transfer operation via Wifi network.
 end SyncDataviaWiFi;
 
 process SyncDataviaBT
--- contains the utility software which performs the data transfer operation via BT connection.
+-- contains the utility Software_3rd_Gen which performs the data transfer operation via BT connection.
 end SyncDataviaBT;
 
 subprogram Display_Application
---contains the application software to be displayed on the touch screen
+--contains the application Software_3rd_Gen to be displayed on the touch screen
 end Display_Application;
 
 thread Main_Controller --main thread of the system
@@ -131,4 +131,4 @@ thread Main_Controller --main thread of the system
 		bite_count: in data port BiteData; --output data port
 end Main_Controller;
 	
-end Software; --end of package Software
+end Software_3rd_Gen; --end of package Software_3rd_Gen

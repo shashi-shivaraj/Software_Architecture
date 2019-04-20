@@ -1,13 +1,13 @@
---application architecture for the system that utilizes the reference architecture BiteCounterSystem
-package BiteCounter_Application
+--application architecture for the system that utilizes the reference architecture BiteCounterSystem_3rd_Gen
+package BiteCounter_Application_3rd_Gen
 public
-	with BiteCounterSystem; -- import entity named BiteCounterSystem
-	with Software;-- import entity named Software
+	with BiteCounterSystem_3rd_Gen; -- import entity named BiteCounterSystem_3rd_Gen
+	with Software_3rd_Gen;-- import entity named Software_3rd_Gen
 	with EMV2;
-	with ErrorStates;
+	with ErrorStates_3rd_Gen;
 
 	--implementation of the system
-	system BiteCounter_system extends BiteCounterSystem::BiteCounter_sys
+	system BiteCounter_system extends BiteCounterSystem_3rd_Gen::BiteCounter_sys
 		features
 			session_control: in event port;
 		annex behavior_specification {**
@@ -24,7 +24,7 @@ public
 	
 	annex EMV2 {**
 			use types ErrorLibrary;
-			use behavior ErrorStates::simple;
+			use behavior ErrorStates_3rd_Gen::simple;
 			
 			
 			component error behavior
@@ -55,11 +55,11 @@ public
 
 	end BiteCounter_system;
 
-	system implementation BiteCounter_system.AppImpl extends BiteCounterSystem::BiteCounter_sys.with_devices
+	system implementation BiteCounter_system.AppImpl extends BiteCounterSystem_3rd_Gen::BiteCounter_sys.with_devices
 		subcomponents
-			UserApp: subprogram Software::Display_Application; --application program  for user interface
-			DataSyncWifi: process Software::SyncDataviaWiFi; --application process to transmit data via Wifi 
-			DataSyncBT: process Software::SyncDataviaBT; --application process to transmit data via BT
+			UserApp: subprogram Software_3rd_Gen::Display_Application; --application program  for user interface
+			DataSyncWifi: process Software_3rd_Gen::SyncDataviaWiFi; --application process to transmit data via Wifi 
+			DataSyncBT: process Software_3rd_Gen::SyncDataviaBT; --application process to transmit data via BT
 	
 	 annex resolute {**
 	prove check_process(this.DataSyncWifi)
@@ -69,4 +69,4 @@ public
 	end BiteCounter_system.AppImpl;
 	
 
-end BiteCounter_Application;
+end BiteCounter_Application_3rd_Gen;

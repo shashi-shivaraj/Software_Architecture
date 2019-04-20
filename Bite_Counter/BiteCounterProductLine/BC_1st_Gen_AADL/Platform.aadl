@@ -1,10 +1,10 @@
-package Platform --package Name-space for components
+package Platform_1st_Gen --package Name-space for components
 public --all entities are visible
 	with SEI; -- import entity named SEI
 	with PhysicalResources; -- import entity named PhysicalResources
 	renames PhysicalResources::all; -- imports all entities from PhysicalResources
 	
-	-- computer hardware platform
+	-- computer hardware Platform_1st_Gen
 	processor MainProcessor -- component category processor as execution resource
 		features --list of ports, access to other elements.
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
@@ -50,17 +50,17 @@ public --all entities are visible
 	control: in event port; 	
 	end Gyroscope;	
 	
-	system platform --platform encapsulation block
+	system Platform_1st_Gen --Platform_1st_Gen encapsulation block
 		features --list of ports, access to other elements.
 			busAcc: provides bus access busaccess; -- access bus component
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
-		properties --Non-functional Properties of platform 
-			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the platform
-			SEI::MIPSCapacity => 3.6 mips; -- computing performance of the platform
-			--SEI::Grossweight => 1.0 kg; -- weight of the platform
-	end platform; --end of platform
+		properties --Non-functional Properties of Platform_1st_Gen 
+			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the Platform_1st_Gen
+			SEI::MIPSCapacity => 3.6 mips; -- computing performance of the Platform_1st_Gen
+			--SEI::Grossweight => 1.0 kg; -- weight of the Platform_1st_Gen
+	end Platform_1st_Gen; --end of Platform_1st_Gen
 
-	system implementation platform.single --system platform.single implementation declaration
+	system implementation Platform_1st_Gen.single --system Platform_1st_Gen.single implementation declaration
 		subcomponents -- internal subcomponents 
 			pc: processor MainProcessor; -- processor component
 			M: memory main_memory; -- memory component
@@ -73,6 +73,6 @@ public --all entities are visible
 			BusPower: feature power -> bus_acc.power; -- connect to power the bus 
 			MemoryPower: feature power -> M.power;-- connect to power the memory
 			GyroPower: feature power -> gyro.power;
-	end platform.single; -- end of system implementation platform.single
+	end Platform_1st_Gen.single; -- end of system implementation Platform_1st_Gen.single
 	
-end Platform;--end of package Platform
+end Platform_1st_Gen;--end of package Platform_1st_Gen

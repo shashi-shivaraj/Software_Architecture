@@ -1,4 +1,4 @@
-package DataTypes
+package DataTypes_1st_Gen
 public	
 	
 	data GyroData --data type named GyroData 
@@ -17,4 +17,4 @@ public
 	end BiteData; --end of data type BiteData definition
 	
 	
-end DataTypes;
+end DataTypes_1st_Gen;

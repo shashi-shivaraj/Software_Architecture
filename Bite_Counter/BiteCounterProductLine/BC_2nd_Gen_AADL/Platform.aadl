@@ -1,10 +1,10 @@
-package Platform --package Name-space for components
+package Platform_2nd_Gen --package Name-space for components
 public --all entities are visible
 	with SEI; -- import entity named SEI
 	with PhysicalResources; -- import entity named PhysicalResources
 	renames PhysicalResources::all; -- imports all entities from PhysicalResources
 	
-	-- computer hardware platform
+	-- computer hardware Platform_2nd_Gen
 	processor MainProcessor -- component category processor as execution resource
 		features --list of ports, access to other elements.
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
@@ -73,17 +73,17 @@ public --all entities are visible
 	control: in event port; 	
 	end Vibrator;
 	
-	system platform --platform encapsulation block
+	system Platform_2nd_Gen --Platform_2nd_Gen encapsulation block
 		features --list of ports, access to other elements.
 			busAcc: provides bus access busaccess; -- access bus component
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
-		properties --Non-functional Properties of platform 
-			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the platform
-			SEI::MIPSCapacity => 3.6 mips; -- computing performance of the platform
-			--SEI::Grossweight => 1.0 kg; -- weight of the platform
-	end platform; --end of platform
+		properties --Non-functional Properties of Platform_2nd_Gen 
+			--SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the Platform_2nd_Gen
+			SEI::MIPSCapacity => 3.6 mips; -- computing performance of the Platform_2nd_Gen
+			--SEI::Grossweight => 1.0 kg; -- weight of the Platform_2nd_Gen
+	end Platform_2nd_Gen; --end of Platform_2nd_Gen
 
-	system implementation platform.single --system platform.single implementation declaration
+	system implementation Platform_2nd_Gen.single --system Platform_2nd_Gen.single implementation declaration
 		subcomponents -- internal subcomponents 
 			pc: processor MainProcessor; -- processor component
 			M: memory main_memory; -- memory component
@@ -102,6 +102,6 @@ public --all entities are visible
 			AudioPower: feature power -> audio.power;
 			WifiPower: feature power -> wifi.power;
 			VibPower: feature power -> vibrate.power;
-	end platform.single; -- end of system implementation platform.single
+	end Platform_2nd_Gen.single; -- end of system implementation Platform_2nd_Gen.single
 	
-end Platform;--end of package Platform
+end Platform_2nd_Gen;--end of package Platform_2nd_Gen

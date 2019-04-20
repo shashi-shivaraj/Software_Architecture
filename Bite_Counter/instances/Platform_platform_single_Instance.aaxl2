@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="ASCII"?>
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="platform_single_Instance" category="system">
+  <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+    <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
+    <ownedValue>
+      <ownedValue xsi:type="aadl2:RealLiteral" value="3.6">
+        <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+      </ownedValue>
+    </ownedValue>
+    <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.1"/>
+  </ownedPropertyAssociation>
+  <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+    <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+    <ownedValue>
+      <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+        <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+      </ownedValue>
+    </ownedValue>
+    <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.2"/>
+  </ownedPropertyAssociation>
+  <featureInstance name="power" category="abstractFeature">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+          <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedAbstractFeature.0"/>
+  </featureInstance>
+  <featureInstance name="busAcc" category="busAccess" direction="in out">
+    <feature xsi:type="aadl2:BusAccess" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
+  </featureInstance>
+  <componentInstance name="bus_acc" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+          <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="power" category="abstractFeature">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedAbstractFeature.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:BusSubcomponent" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedBusSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:BusType" href="../Platform.aadl#Platform.busaccess"/>
+  </componentInstance>
+  <componentInstance name="gyro" category="device">
+    <featureInstance name="power" category="abstractFeature">
+      <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedAbstractFeature.0"/>
+    </featureInstance>
+    <featureInstance name="data_channel" direction="out">
+      <feature xsi:type="aadl2:DataPort" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="control" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="busAcc" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDeviceSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Platform.aadl#Platform.Gyroscope"/>
+  </componentInstance>
+  <componentInstance name="audio" category="device">
+    <featureInstance name="power" category="abstractFeature">
+      <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedAbstractFeature.0"/>
+    </featureInstance>
+    <featureInstance name="data_channel">
+      <feature xsi:type="aadl2:DataPort" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="control" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="busAcc" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDeviceSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Platform.aadl#Platform.Speaker"/>
+  </componentInstance>
+  <componentInstance name="vibrate" category="device">
+    <featureInstance name="power" category="abstractFeature">
+      <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedAbstractFeature.0"/>
+    </featureInstance>
+    <featureInstance name="control" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="busAcc" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDeviceSubcomponent.2"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Platform.aadl#Platform.Vibrator"/>
+  </componentInstance>
+  <componentInstance name="wifi" category="device">
+    <featureInstance name="power" category="abstractFeature">
+      <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedAbstractFeature.0"/>
+    </featureInstance>
+    <featureInstance name="data_channel" direction="in out">
+      <feature xsi:type="aadl2:DataPort" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedDataPort.0"/>
+    </featureInstance>
+    <featureInstance name="control" category="eventPort">
+      <feature xsi:type="aadl2:EventPort" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedEventPort.0"/>
+    </featureInstance>
+    <featureInstance name="busAcc" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:DeviceSubcomponent" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedDeviceSubcomponent.3"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:DeviceType" href="../Platform.aadl#Platform.WifiAdapt"/>
+  </componentInstance>
+  <componentInstance name="M" category="memory">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+          <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="power" category="abstractFeature">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedAbstractFeature.0"/>
+    </featureInstance>
+    <featureInstance name="busAcc" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedMemorySubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:MemoryType" href="../Platform.aadl#Platform.main_memory"/>
+  </componentInstance>
+  <componentInstance name="pc" category="processor">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="3.6">
+          <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.01">
+          <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.2"/>
+    </ownedPropertyAssociation>
+    <featureInstance name="power" category="abstractFeature">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.0"/>
+    </featureInstance>
+    <featureInstance name="busAcc" category="busAccess" direction="in out">
+      <feature xsi:type="aadl2:BusAccess" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedBusAccess.0"/>
+    </featureInstance>
+    <subcomponent xsi:type="aadl2:ProcessorSubcomponent" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedProcessorSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessorType" href="../Platform.aadl#Platform.MainProcessor"/>
+  </componentInstance>
+  <connectionInstance name="power -> pc.power" destination="//@componentInstance.6/@featureInstance.0" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.6/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedFeatureConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="power -> bus_acc.power" destination="//@componentInstance.0/@featureInstance.0" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.0/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedFeatureConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="power -> M.power" destination="//@componentInstance.5/@featureInstance.0" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.5/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedFeatureConnection.2"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="power -> gyro.power" destination="//@componentInstance.1/@featureInstance.0" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.1/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedFeatureConnection.3"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="power -> audio.power" destination="//@componentInstance.2/@featureInstance.0" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.2/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedFeatureConnection.4"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="power -> wifi.power" destination="//@componentInstance.4/@featureInstance.0" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.4/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedFeatureConnection.5"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="power -> vibrate.power" destination="//@componentInstance.3/@featureInstance.0" source="//@featureInstance.0">
+    <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.3/@featureInstance.0">
+      <connection xsi:type="aadl2:FeatureConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedFeatureConnection.6"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus_acc -> busAcc" kind="accessConnection" destination="//@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.0"/>
+    </connectionReference>
+  </connectionInstance>
+  <connectionInstance name="bus_acc -> pc.busAcc" complete="true" kind="accessConnection" destination="//@componentInstance.6/@featureInstance.1" source="//@componentInstance.0">
+    <connectionReference context="/" source="//@componentInstance.0" destination="//@componentInstance.6/@featureInstance.1">
+      <connection xsi:type="aadl2:AccessConnection" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.9/@ownedAccessConnection.1"/>
+    </connectionReference>
+  </connectionInstance>
+  <systemOperationMode name="No Modes"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../Platform.aadl#Platform.platform.single"/>
+</instance:SystemInstance>

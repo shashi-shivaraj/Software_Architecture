@@ -1,13 +1,13 @@
---application architecture for the system that utilizes the reference architecture BiteCounterSystem
-package BiteCounter_Application
+--application architecture for the system that utilizes the reference architecture BiteCounterSystem_2nd_Gen
+package BiteCounter_Application_2nd_Gen
 public
-	with BiteCounterSystem; -- import entity named BiteCounterSystem
-	with Software;-- import entity named Software
+	with BiteCounterSystem_2nd_Gen; -- import entity named BiteCounterSystem_2nd_Gen
+	with Software_2nd_Gen;-- import entity named Software_2nd_Gen
 	with EMV2;
-	with ErrorStates;
+	with ErrorStates_2nd_Gen;
 
 	--implementation of the system
-	system BiteCounter_system extends BiteCounterSystem::BiteCounter_sys
+	system BiteCounter_system extends BiteCounterSystem_2nd_Gen::BiteCounter_sys
 		features
 			session_control: in event port;
 		annex behavior_specification {**
@@ -24,7 +24,7 @@ public
 	
 	annex EMV2 {**
 			use types ErrorLibrary;
-			use behavior ErrorStates::simple;
+			use behavior ErrorStates_2nd_Gen::simple;
 			
 			
 			component error behavior
@@ -55,10 +55,10 @@ public
 
 	end BiteCounter_system;
 
-	system implementation BiteCounter_system.AppImpl extends BiteCounterSystem::BiteCounter_sys.with_devices
+	system implementation BiteCounter_system.AppImpl extends BiteCounterSystem_2nd_Gen::BiteCounter_sys.with_devices
 		subcomponents
-			UserApp: subprogram Software::Display_Application; --application program  for user interface
-			DataSyncWifi: process Software::SyncDataviaWiFi; --application process to transmit data via Wifi 
+			UserApp: subprogram Software_2nd_Gen::Display_Application; --application program  for user interface
+			DataSyncWifi: process Software_2nd_Gen::SyncDataviaWiFi; --application process to transmit data via Wifi 
 
 	 annex resolute {**
 	prove check_process(this.DataSyncWifi)
@@ -67,4 +67,4 @@ public
 	end BiteCounter_system.AppImpl;
 	
 
-end BiteCounter_Application;
+end BiteCounter_Application_2nd_Gen;

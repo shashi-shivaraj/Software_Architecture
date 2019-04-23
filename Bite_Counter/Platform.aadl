@@ -10,7 +10,9 @@ public --all entities are visible
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 			busAcc: requires bus access busaccess; -- access bus component
 		properties --Non-functional Properties of powerpc
-			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the processor 
+			Scheduling_Protocol =>(POSIX_1003_HIGHEST_PRIORITY_FIRST_PROTOCOL);
+			Preemptive_Scheduler => true;
+			SEI::PowerBudget => 0.10 w applies to power; -- power requirement of the processor 
 			SEI::MIPSCapacity => 3.6 mips; -- computing performance of the processor
 			SEI::Grossweight => 0.01 kg; -- weight of the processor
 	end MainProcessor; --end of processor powerpc definition
@@ -19,7 +21,7 @@ public --all entities are visible
 		features --list of ports, access to other elements.
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 		properties --Non-functional Properties of CANbus
-			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the bus 
+			SEI::PowerBudget => 0.08 w applies to power; -- power requirement of the bus 
 			SEI::Grossweight => 0.01 kg; -- weight of the bus
 	end busaccess; --end of bus CANbus definition
 
@@ -28,8 +30,8 @@ public --all entities are visible
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component
 			busAcc: requires bus access busaccess; -- access bus component 
 		properties --Non-functional Properties of main_memory  
-			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the main_memory
-			SEI::Grossweight => 0.001 kg; -- weight of the main_memory
+			SEI::PowerBudget => 0.08 w applies to power; -- power requirement of the main_memory
+			SEI::Grossweight => 0.005 kg; -- weight of the main_memory
 	end main_memory; --end of memory main_memory definition
 	
 	memory flash_memory -- component category memory as storage
@@ -37,8 +39,8 @@ public --all entities are visible
 			power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 			busAcc: requires bus access busaccess; -- access bus component
 		properties --Non-functional Properties of main_memory  
-			SEI::PowerBudget => 0.8 w applies to power; -- power requirement of the main_memory
-			SEI::Grossweight => 0.001 kg; -- weight of the main_memory
+			SEI::PowerBudget => 0.08 w applies to power; -- power requirement of the main_memory
+			SEI::Grossweight => 0.005 kg; -- weight of the main_memory
 	end flash_memory; --end of memory main_memory definition
 	
 	
@@ -48,6 +50,9 @@ public --all entities are visible
 	power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 	data_channel: out data port;
 	control: in event port; 	
+	properties --Non-functional Properties
+			SEI::PowerBudget => 0.08 w applies to power;
+			SEI::Grossweight => 0.005 kg;
 	end Gyroscope;
 	
 	device WifiAdapt --for data transfer via  wifi network
@@ -56,6 +61,9 @@ public --all entities are visible
 	power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 	data_channel: in out data port;
 	control: in event port; 	
+	properties --Non-functional Properties
+			SEI::PowerBudget => 0.08 w applies to power;
+			SEI::Grossweight => 0.005 kg;
 	end WifiAdapt;
 	
 	device Speaker --for sound notifications
@@ -63,7 +71,10 @@ public --all entities are visible
 	busAcc: requires bus access busaccess; -- access bus component
 	power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 	data_channel: in data port;
-	control: in event port; 	
+	control: in event port; 
+	properties --Non-functional Properties
+			SEI::PowerBudget => 0.08 w applies to power;
+			SEI::Grossweight => 0.005 kg;	
 	end Speaker;
 	
 	device Vibrator --for notifications via vibrations
@@ -71,6 +82,9 @@ public --all entities are visible
 	busAcc: requires bus access busaccess; -- access bus component
 	power: in feature PhysicalResources::ElectricalPower; -- access to power component 
 	control: in event port; 	
+	properties --Non-functional Properties
+			SEI::PowerBudget => 0.08 w applies to power;
+			SEI::Grossweight => 0.005 kg;
 	end Vibrator;
 	
 	system platform --platform encapsulation block

@@ -16,7 +16,25 @@
     <feature xsi:type="aadl2:BusAccess" href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusAccess.0"/>
   </featureInstance>
   <componentInstance name="touch_Screen" category="device">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.055">
+          <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
     <featureInstance name="power" category="abstractFeature">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.08">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
       <feature xsi:type="aadl2:AbstractFeature" href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.0"/>
     </featureInstance>
     <featureInstance name="update_display">
@@ -43,6 +61,15 @@
   </componentInstance>
   <componentInstance name="Application" category="process">
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:ListValue">
+          <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.6"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
       <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
       <ownedValue>
         <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
@@ -67,6 +94,15 @@
       <feature xsi:type="aadl2:EventPort" href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedEventPort.0"/>
     </featureInstance>
     <componentInstance name="main_controller" category="thread">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
       <featureInstance name="update_display" direction="out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
@@ -103,6 +139,15 @@
     </componentInstance>
     <componentInstance name="gyro" category="thread">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Stack_Size"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:IntegerLiteral" value="10">
@@ -124,10 +169,10 @@
         <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:RangeValue">
-            <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="5">
               <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </minimum>
-            <maximum xsi:type="aadl2:IntegerLiteral" value="12">
+            <maximum xsi:type="aadl2:IntegerLiteral" value="6">
               <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
             </maximum>
           </ownedValue>
@@ -155,6 +200,15 @@
     </componentInstance>
     <componentInstance name="app" category="thread">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Stack_Size"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:IntegerLiteral" value="10">
@@ -162,6 +216,29 @@
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="12">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <featureInstance name="displayout" direction="out">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -199,6 +276,24 @@
     </componentInstance>
     <componentInstance name="algo" category="thread">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="//@componentInstance.2/@componentInstance.6"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Stack_Size"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
@@ -206,6 +301,29 @@
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="10">
+            <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Compute_Execution_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RangeValue">
+            <minimum xsi:type="aadl2:IntegerLiteral" value="2">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </minimum>
+            <maximum xsi:type="aadl2:IntegerLiteral" value="4">
+              <unit href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </maximum>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Software.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <featureInstance name="gyro_data">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -312,7 +430,7 @@
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
           <ownedValue>
-            <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.08">
               <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
             </ownedValue>
           </ownedValue>
@@ -325,7 +443,25 @@
       <classifier xsi:type="aadl2:BusType" href="../Platform.aadl#Platform.busaccess"/>
     </componentInstance>
     <componentInstance name="gyro" category="device">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.005">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <featureInstance name="power" category="abstractFeature">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.08">
+              <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedAbstractFeature.0"/>
       </featureInstance>
       <featureInstance name="data_channel" direction="out">
@@ -342,7 +478,25 @@
       <classifier xsi:type="aadl2:DeviceType" href="../Platform.aadl#Platform.Gyroscope"/>
     </componentInstance>
     <componentInstance name="audio" category="device">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.005">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <featureInstance name="power" category="abstractFeature">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.08">
+              <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedAbstractFeature.0"/>
       </featureInstance>
       <featureInstance name="data_channel">
@@ -359,7 +513,25 @@
       <classifier xsi:type="aadl2:DeviceType" href="../Platform.aadl#Platform.Speaker"/>
     </componentInstance>
     <componentInstance name="vibrate" category="device">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.005">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <featureInstance name="power" category="abstractFeature">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.08">
+              <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.7/@ownedAbstractFeature.0"/>
       </featureInstance>
       <featureInstance name="control" category="eventPort">
@@ -373,7 +545,25 @@
       <classifier xsi:type="aadl2:DeviceType" href="../Platform.aadl#Platform.Vibrator"/>
     </componentInstance>
     <componentInstance name="wifi" category="device">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.005">
+            <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
       <featureInstance name="power" category="abstractFeature">
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.08">
+              <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
         <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedAbstractFeature.0"/>
       </featureInstance>
       <featureInstance name="data_channel" direction="in out">
@@ -393,7 +583,7 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:RealLiteral" value="0.001">
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.005">
             <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
           </ownedValue>
         </ownedValue>
@@ -403,7 +593,7 @@
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
           <ownedValue>
-            <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.08">
               <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
             </ownedValue>
           </ownedValue>
@@ -426,7 +616,7 @@
             <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
           </ownedValue>
         </ownedValue>
-        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.2"/>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.4"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
@@ -435,17 +625,35 @@
             <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
           </ownedValue>
         </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.2"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="../../../plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Preemptive_Scheduler"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:BooleanLiteral" value="true"/>
+        </ownedValue>
         <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
       </ownedPropertyAssociation>
       <featureInstance name="power" category="abstractFeature">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
           <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
           <ownedValue>
-            <ownedValue xsi:type="aadl2:RealLiteral" value="0.8">
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
               <unit href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.5/@ownedLiteral.1"/>
             </ownedValue>
           </ownedValue>
-          <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
+          <propertyAssociation href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.2"/>
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:AbstractFeature" href="../Platform.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedAbstractFeature.0"/>
       </featureInstance>

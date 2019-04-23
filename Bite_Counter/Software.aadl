@@ -12,7 +12,7 @@ public --all entities are visible
 		properties --Non-functional Properties of sensor_sense_thread
 			Stack_Size => 10 Kbyte; --stack memory size = 10 Kilobytes  
 			Period => 10 ms; --thread execution period = 20 millisecond
-			Compute_Execution_Time => 10 ms .. 12 ms; --thread execution time varies from 10ms to 12ms
+			Compute_Execution_Time => 5 ms .. 6 ms; --thread execution time varies 
 	end gyro_sensor_thread; --end of thread sensor_sense_thread definition
 
 	thread application_thread --component thread for actuator execution flow
@@ -23,8 +23,8 @@ public --all entities are visible
 			disp_in : in data port DisplayData;
 		properties --Non-functional Properties of actuator_output_thread
 			Stack_Size => 10 Kbyte; --stack memory size = 10 Kilobytes  
-			--Period => 20 ms; --thread execution period = 20 millisecond
-			--Compute_Execution_Time => 8 ms .. 10 ms; --thread execution time varies from 8ms to 10ms
+			Period => 20 ms; --thread execution period = 20 millisecond
+			Compute_Execution_Time => 10 ms .. 12 ms; --thread execution time varies
 	end application_thread; --end of thread actuator_output_thread definition
 
 	thread BC_Algo_Thread --component thread for Bite Detection
@@ -33,9 +33,9 @@ public --all entities are visible
 			BiteCount: out data port BiteData; --output data port
 		properties  --Non-functional Properties of filterApp
 			Stack_Size => 25 Kbyte; --stack memory size = 25 Kilobytes  
-			--Data_size => 50 KByte; -- -data memory size = 50 Kilobytes for control state
-			--Period => 10 ms; --thread execution period = 20 millisecond
-			--   Compute_Execution_Time => 2 ms .. 6 ms; intentionally left out
+			Data_size => 50 KByte; -- -data memory size = 50 Kilobytes for control state
+			Period => 10 ms; --thread execution period = 20 millisecond
+		    Compute_Execution_Time => 2 ms .. 4 ms;
 	end BC_Algo_Thread;  --end of thread controlApp definition
 
 --	system Middleware

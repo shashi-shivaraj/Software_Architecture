@@ -129,7 +129,7 @@
           <seg>feature</seg>
           <seg>bitecount</seg>
         </bo>
-        <position x="168.0" y="60.0"/>
+        <position x="169.0" y="60.0"/>
         <contentFilters/>
       </element>
       <element uuid="98b0ada3-247b-4f17-8a1f-aec35eff3733" dockArea="right">
@@ -137,7 +137,7 @@
           <seg>feature</seg>
           <seg>gyro_data</seg>
         </bo>
-        <position x="170.0" y="10.0"/>
+        <position x="168.0" y="10.0"/>
         <contentFilters/>
       </element>
       <bo>
@@ -160,7 +160,7 @@
           <seg>feature</seg>
           <seg>disp_in</seg>
         </bo>
-        <position x="185.0" y="10.0"/>
+        <position x="186.0" y="10.0"/>
         <contentFilters/>
       </element>
       <element uuid="040e8e23-70dd-4ff1-81e3-0593353ef6cf" dockArea="right">
@@ -176,7 +176,7 @@
           <seg>feature</seg>
           <seg>notify_evt</seg>
         </bo>
-        <position x="171.0" y="60.0"/>
+        <position x="170.0" y="60.0"/>
         <contentFilters/>
       </element>
       <element uuid="2fda3149-4acf-454e-837f-9e1ee728f0b6" dockArea="left">

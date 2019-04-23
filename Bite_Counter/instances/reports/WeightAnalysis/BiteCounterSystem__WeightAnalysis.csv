@@ -1,0 +1,13 @@
+Weight totals Report
+
+touch_Screen: [L] Sum of weights / gross weight is 0.055 kg (no limit specified)
+bus_acc: [L] Sum of weights / gross weight is 0.010 kg (no limit specified)
+gyro: [L] Sum of weights / gross weight is 0.005 kg (no limit specified)
+audio: [L] Sum of weights / gross weight is 0.005 kg (no limit specified)
+vibrate: [L] Sum of weights / gross weight is 0.005 kg (no limit specified)
+wifi: [L] Sum of weights / gross weight is 0.005 kg (no limit specified)
+M: [L] Sum of weights / gross weight is 0.005 kg (no limit specified)
+pc: [L] Sum of weights / gross weight is 0.010 kg (no limit specified)
+Warning! hw: [G] Sum of weights (0.045 kg) less than gross weight of 0.100 kg (using gross weight)
+hw: [L] Sum of weights / gross weight is 0.100 kg (no limit specified)
+BiteCounter_sys_with_devices_Instance: [L] Sum of weights / gross weight is 0.155 kg (no limit specified)

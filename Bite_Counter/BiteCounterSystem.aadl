@@ -15,6 +15,9 @@ device TouchScreen -- device to get the user input via touch
 		power: in feature;
 	flows
 		display_signal : flow sink update_display;
+	properties --Non-functional Properties
+			SEI::PowerBudget => 0.5 w applies to power;
+			SEI::Grossweight => 0.055 kg;
 	
 end TouchScreen;
 
@@ -41,6 +44,9 @@ system implementation BiteCounter_sys.with_devices
 	    sensoraccess: bus access hw.busAcc -> busAcc;
 	    power_access:feature power->hw.power;
 	    power_touchscreen:feature power->touch_Screen.power;
+	 
+	properties
+		Actual_Processor_Binding =>(reference (hw.pc)) applies to Application;
 	    	
 	 annex resolute {**
 	prove check_process(this.Application)

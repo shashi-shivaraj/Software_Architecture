@@ -15,6 +15,48 @@
       </bo>
       <contentFilters/>
     </element>
+    <element uuid="573c7dae-26e0-4132-9326-87d15afa448c">
+      <element uuid="869b6443-b7f8-45a2-94fe-d49fad7ce849">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>power_access</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="d0ff7d81-6fd0-4554-a9c9-876551c41f70">
+      <element uuid="6a7887c0-2a82-4fb4-876b-5c75961cbab5">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>power_touchscreen</seg>
+      </bo>
+      <contentFilters/>
+    </element>
+    <element uuid="352e3191-eff4-4bbb-ba60-e9a06563d87a">
+      <element uuid="007b3a74-16d9-49b0-8e43-44c9f5402915">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+        <contentFilters/>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>sensoraccess</seg>
+      </bo>
+      <contentFilters/>
+    </element>
     <element uuid="a7cd4c4a-89b7-4a4e-963c-edbc8a825ca6">
       <element uuid="d1106058-dd2d-48bd-bd33-1fb9832535d3">
         <bo>
@@ -29,12 +71,12 @@
       </bo>
       <contentFilters/>
     </element>
-    <element uuid="6b783f83-4de2-4f49-8360-d1c802f26e22" dockArea="left">
+    <element uuid="1bed1965-4869-49ae-8ea8-7b2f94cf2bf2" dockArea="right">
       <bo>
         <seg>feature</seg>
-        <seg>display</seg>
+        <seg>busacc</seg>
       </bo>
-      <position y="84.0"/>
+      <position x="787.0"/>
       <contentFilters/>
     </element>
     <element uuid="2b16f266-7fd5-4df2-84f3-3bd711dbbe1c" dockArea="left">
@@ -42,7 +84,7 @@
         <seg>feature</seg>
         <seg>power</seg>
       </bo>
-      <position y="208.0"/>
+      <position y="278.0"/>
       <contentFilters/>
     </element>
     <element uuid="114ba76b-0c12-47e9-8b94-a22e64826982">
@@ -59,7 +101,7 @@
           <seg>feature</seg>
           <seg>touch_event</seg>
         </bo>
-        <position x="225.0" y="10.0"/>
+        <position x="223.0" y="10.0"/>
         <contentFilters/>
       </element>
       <bo>
@@ -77,12 +119,12 @@
       </contentFilters>
     </element>
     <element uuid="1110bff9-01e1-421b-83ff-45b4f171f9f1">
-      <element uuid="017cc70d-b071-4d6b-86ad-90c3a511068f" dockArea="left">
+      <element uuid="017cc70d-b071-4d6b-86ad-90c3a511068f" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>busacc</seg>
         </bo>
-        <position y="10.0"/>
+        <position x="145.0" y="33.0"/>
         <contentFilters/>
       </element>
       <element uuid="7f0410a7-51d2-495a-a626-410ca74fc91a" dockArea="left">
@@ -97,7 +139,7 @@
         <seg>subcomponent</seg>
         <seg>hw</seg>
       </bo>
-      <position x="68.0" y="38.0"/>
+      <position x="57.0" y="18.0"/>
       <size width="208.0" height="110.0"/>
       <contentFilters>
         <filter>features</filter>
@@ -108,12 +150,12 @@
       </contentFilters>
     </element>
     <element uuid="08968625-c5c1-450b-a6f6-198d1aa38636">
-      <element uuid="e4762776-41aa-4623-9476-48952b9bfaf2" dockArea="left">
+      <element uuid="d2dd3813-0b0f-4a5b-9439-8cd2f15e6c88" dockArea="left">
         <bo>
           <seg>feature</seg>
-          <seg>busacc</seg>
+          <seg>power</seg>
         </bo>
-        <position y="110.0"/>
+        <position y="105.0"/>
         <contentFilters/>
       </element>
       <element uuid="76351373-176f-4d69-b34a-15013c7ca750" dockArea="left">
@@ -143,7 +185,7 @@
         <seg>subcomponent</seg>
         <seg>touch_screen</seg>
       </bo>
-      <position x="406.0" y="160.0"/>
+      <position x="458.0" y="160.0"/>
       <size width="369.0" height="160.0"/>
       <contentFilters>
         <filter>features</filter>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<FaultTree:FaultTree xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:FaultTree="http://www.aadl.info/FaultTree" name="bitecounter_application_bitecounter_system_appimpl-active_tree" root="//@events.0">
+  <instanceRoot href="../../BiteCounter_Application_BiteCounter_system_AppImpl_Instance.aaxl2#/"/>
+  <events name="bitecounter_application_bitecounter_system_appimpl-active" assignedProbability="0" referenceCount="1" type="Intermediate">
+    <relatedInstanceObject href="../../BiteCounter_Application_BiteCounter_system_AppImpl_Instance.aaxl2#/"/>
+    <relatedEMV2Object href="../../../ErrorStates.aadl#/0/@ownedPublicSection/@ownedAnnexLibrary.0/@parsedAnnexLibrary/@behaviors.0/@states.1"/>
+  </events>
+</FaultTree:FaultTree>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:FaultTree="http://www.aadl.info/FaultTree" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_kgRugGYzEemoQOozZv4fJA" selectedViews="_nsqK8GYzEemoQOozZv4fJA" version="14.1.0.201810161215">
+    <semanticResources>Agree/BC_agree.aadl</semanticResources>
+    <semanticResources>Platform.aadl</semanticResources>
+    <semanticResources>Software.aadl</semanticResources>
+    <semanticResources>BiteCounterSystem.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.contribution.sei/resources/packages/PhysicalResources.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl</semanticResources>
+    <semanticResources>DataTypes.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.workspace/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl</semanticResources>
+    <semanticResources>BC_1stgen.reqspec</semanticResources>
+    <semanticResources>BC_2ndgen.reqspec</semanticResources>
+    <semanticResources>BC_3rdgen.reqspec</semanticResources>
+    <semanticResources>BC_Sys_v1_0.reqspec</semanticResources>
+    <semanticResources>BC_Sys_v1_1.reqspec</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_1st_Gen_AADL/BiteCounterSystem.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_1st_Gen_AADL/Platform.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_1st_Gen_AADL/DataTypes.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_1st_Gen_AADL/Software.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_1st_Gen_AADL/BiteCounter_Application.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.errormodel.contrib/resources/properties/EMV2.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_1st_Gen_AADL/ErrorStates.aadl</semanticResources>
+    <semanticResources>platform:/plugin/org.osate.aadl2.errormodel.contrib/resources/packages/ErrorLibrary.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_1st_Gen_AADL/diagrams/Software_sys_controller_impl.aadl_diagram</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_2nd_Gen_AADL/BiteCounterSystem.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_2nd_Gen_AADL/Platform.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_2nd_Gen_AADL/DataTypes.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_2nd_Gen_AADL/Software.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_2nd_Gen_AADL/BiteCounter_Application.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_2nd_Gen_AADL/ErrorStates.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_3rd_Gen_AADL/BiteCounterSystem.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_3rd_Gen_AADL/Platform.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_3rd_Gen_AADL/DataTypes.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_3rd_Gen_AADL/Software.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_3rd_Gen_AADL/BiteCounter_Application.aadl</semanticResources>
+    <semanticResources>BiteCounterProductLine/BC_3rd_Gen_AADL/ErrorStates.aadl</semanticResources>
+    <semanticResources>BiteCounter_Application.aadl</semanticResources>
+    <semanticResources>ErrorStates.aadl</semanticResources>
+    <semanticResources>Resolute/resolute_rules.aadl</semanticResources>
+    <semanticResources>diagrams/BiteCounterSystem_BiteCounter_sys_with_devices.aadl_diagram</semanticResources>
+    <semanticResources>diagrams/Platform_platform_single.aadl_diagram</semanticResources>
+    <semanticResources>diagrams/Software_sys_controller_impl.aadl_diagram</semanticResources>
+    <semanticResources>instances/BiteCounterSystem_BiteCounter_sys_with_devices_Instance.aaxl2</semanticResources>
+    <semanticResources>instances/BiteCounter_Application_BiteCounter_system_AppImpl_Instance.aaxl2</semanticResources>
+    <semanticResources>instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#/</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_nsqK8GYzEemoQOozZv4fJA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_n4IbIGYzEemoQOozZv4fJA" name="bitecounter_application_bitecounter_system_appimpl-active_tree FaultTreeTable" repPath="#_n0ssoGYzEemoQOozZv4fJA">
+        <description xmi:type="description_1:EditionTableDescription" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']"/>
+        <target xmi:type="FaultTree:FaultTree" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <table:DTable uid="_n0ssoGYzEemoQOozZv4fJA" name="bitecounter_application_bitecounter_system_appimpl-active_tree FaultTreeTable" headerColumnWidth="205">
+    <target xmi:type="FaultTree:FaultTree" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#/"/>
+    <lines xmi:type="table:DLine" uid="_n305IGYzEemoQOozZv4fJA" label=" 'BiteCounter_system.AppImpl'">
+      <target xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+      <semanticElements xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+      <originMapping xmi:type="description_1:LineMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedLineMappings[name='EventLine']"/>
+      <cells xmi:type="table:DCell" uid="_n3-qKmYzEemoQOozZv4fJA" label="error state 'Active'" column="_n3-qIGYzEemoQOozZv4fJA">
+        <target xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+        <semanticElements xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_n3-qLGYzEemoQOozZv4fJA" label="" column="_n3-qImYzEemoQOozZv4fJA">
+        <target xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+        <semanticElements xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_n3-qLmYzEemoQOozZv4fJA" label="" column="_n3-qJGYzEemoQOozZv4fJA">
+        <target xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+        <semanticElements xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_n3-qMGYzEemoQOozZv4fJA" label="Intermediate event" column="_n3-qJmYzEemoQOozZv4fJA">
+        <target xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+        <semanticElements xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+      </cells>
+      <cells xmi:type="table:DCell" uid="_n3-qMmYzEemoQOozZv4fJA" label="no" column="_n3-qKGYzEemoQOozZv4fJA">
+        <target xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+        <semanticElements xmi:type="FaultTree:Event" href="instances/reports/fta/bitecounter_application_bitecounter_system_appimpl-active_tree.faulttree#//@events.0"/>
+      </cells>
+    </lines>
+    <columns xmi:type="table:DFeatureColumn" uid="_n3-qIGYzEemoQOozZv4fJA" label="Error Model Element/Type" cells="_n3-qKmYzEemoQOozZv4fJA" width="153" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='ErrorColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_n3-qImYzEemoQOozZv4fJA" label="Computed Probability" cells="_n3-qLGYzEemoQOozZv4fJA" width="132" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='ProbabilityColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_n3-qJGYzEemoQOozZv4fJA" label="Specified Probability" cells="_n3-qLmYzEemoQOozZv4fJA" width="123" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='ProbabilityColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_n3-qJmYzEemoQOozZv4fJA" label="Event/Gate Type" cells="_n3-qMGYzEemoQOozZv4fJA" width="108" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='EventTypeColumn']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_n3-qKGYzEemoQOozZv4fJA" label="Dependent Event" cells="_n3-qMmYzEemoQOozZv4fJA" width="105" featureName="*">
+      <originMapping xmi:type="description_1:FeatureColumnMapping" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']/@ownedColumnMappings[name='DependentEventColumn']"/>
+    </columns>
+    <description xmi:type="description_1:EditionTableDescription" href="platform:/plugin/org.osate.aadl2.errormodel.faulttree.design/description/faulttree.odesign#//@ownedViewpoints[name='FaultTree']/@ownedRepresentations[name='FaultTreeTable']"/>
+  </table:DTable>
+</xmi:XMI>

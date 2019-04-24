@@ -1,0 +1,31 @@
+Resource Budget Analysis Report
+
+Resource Summary: 
+  MIPS capacity 3.600 MIPS : MIPS budget 0.800 MIPS
+  1 out of 1 with MIPS capacity
+*   1 out of 6 with MIPS budget
+
+
+
+Detailed Processor MIPS Capacity Report 
+
+Component,Capacity
+processor hw.pc, 3.600 MIPS,
+Total, 3.600 MIPS,
+
+
+Detailed MIPS Budget Report 
+
+Component,Budget,Actual,Notes
+device touch_Screen, 0.000 MIPS,0.000 MIPS,
+  thread Application.main_controller,   0.000 MIPS,  0.000 MIPS,
+  thread Application.gyro,   0.000 MIPS,  0.000 MIPS,
+  thread Application.app,   0.000 MIPS,  0.000 MIPS,
+  thread Application.algo,   0.000 MIPS,  0.000 MIPS,
+process Application, 0.800 MIPS,0.000 MIPS,
+  device hw.gyro,   0.000 MIPS,  0.000 MIPS,
+  device hw.audio,   0.000 MIPS,  0.000 MIPS,
+  device hw.vibrate,   0.000 MIPS,  0.000 MIPS,
+  device hw.wifi,   0.000 MIPS,  0.000 MIPS,
+system hw, 0.000 MIPS,0.000 MIPS,
+Total, ,0.800 MIPS,

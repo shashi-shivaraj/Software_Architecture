@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="BiteCounter_sys_with_devices_Instance" category="system">
+<instance:SystemInstance xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance" name="BiteCounter_system_AppImpl_Instance" category="system">
   <featureInstance name="power" category="abstractFeature">
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
       <property href="../../../plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.PowerBudget"/>
@@ -14,6 +14,9 @@
   </featureInstance>
   <featureInstance name="busAcc" category="busAccess" direction="in out">
     <feature xsi:type="aadl2:BusAccess" href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedBusAccess.0"/>
+  </featureInstance>
+  <featureInstance name="session_control" category="eventPort">
+    <feature xsi:type="aadl2:EventPort" href="../BiteCounter_Application.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedEventPort.0"/>
   </featureInstance>
   <componentInstance name="touch_Screen" category="device">
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -673,6 +676,21 @@
     <index>0</index>
     <classifier xsi:type="aadl2:SystemImplementation" href="../Platform.aadl#Platform.platform.single"/>
   </componentInstance>
+  <componentInstance name="DataSyncWifi" category="process">
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../BiteCounter_Application.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessType" href="../Software.aadl#Software.SyncDataviaWiFi"/>
+  </componentInstance>
+  <componentInstance name="DataSyncBT" category="process">
+    <subcomponent xsi:type="aadl2:ProcessSubcomponent" href="../BiteCounter_Application.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedProcessSubcomponent.1"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:ProcessType" href="../Software.aadl#Software.SyncDataviaBT"/>
+  </componentInstance>
+  <componentInstance name="UserApp" category="subprogram">
+    <subcomponent xsi:type="aadl2:SubprogramSubcomponent" href="../BiteCounter_Application.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedSubprogramSubcomponent.0"/>
+    <index>0</index>
+    <classifier xsi:type="aadl2:SubprogramType" href="../Software.aadl#Software.Display_Application"/>
+  </componentInstance>
   <connectionInstance name="power -> hw.pc.power" destination="//@componentInstance.2/@componentInstance.6/@featureInstance.0" source="//@featureInstance.0">
     <connectionReference context="/" source="//@featureInstance.0" destination="//@componentInstance.2/@featureInstance.0">
       <connection xsi:type="aadl2:FeatureConnection" href="../BiteCounterSystem.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedFeatureConnection.0"/>
@@ -759,5 +777,5 @@
     </connectionReference>
   </connectionInstance>
   <systemOperationMode name="No Modes"/>
-  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../BiteCounterSystem.aadl#BiteCounterSystem.BiteCounter_sys.with_devices"/>
+  <componentImplementation xsi:type="aadl2:SystemImplementation" href="../BiteCounter_Application.aadl#BiteCounter_Application.BiteCounter_system.AppImpl"/>
 </instance:SystemInstance>
